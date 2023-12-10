@@ -1,0 +1,601 @@
+/* --- Commun Form Css --- */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.signinup-group {
+    position: relative;
+    margin: 0px 0 10px;
+}
+
+.signinup-group select,
+.signinup-group textarea,
+.signinup-group input {
+    font-weight: 400;
+    display: block;
+    color: white;
+    border: 0;
+    font-size: 16px;
+    background-color: rgba(32, 30, 35, 0.5);
+    border: 1px solid rgb(63, 59, 69);
+    width: 100%;
+    outline: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.signinup-group select[disabled],
+.signinup-group textarea[disabled],
+.signinup-group input[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* .signinup-group select option:first-child {
+    font-weight: bold;
+    color: red;
+    opacity: 0;
+} */
+
+.signinup-group.sgli select,
+.signinup-group.sgli input{
+    padding-left: 50px;
+}
+
+.signinup-group.sgri input,
+.signinup-group.sgri select{
+    padding-right: 40px;
+}
+
+.signinup-group input[type="password"] {
+    padding: 10px 40px 10px 10px;
+}
+
+.signinup-group textarea{
+    min-height: 80px;
+}
+
+.signinup-group.sg-150-textarea textarea{
+    min-height: 150px;
+}
+
+.signinup-group .twl-lable{
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 300;
+    color: #bfbac4;
+}
+
+.signinup-group .group__label {
+    font-size: 14px;
+    color: #f2f1f3;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 2px;
+    margin-left: 5px;
+}
+
+.signinup-group .group__label span{
+    font-size: 12px;
+    color: #bfbac4;
+    margin-left: 5px;
+}
+
+.signinup-group.sgli .group_left_icon{
+    position: absolute;
+    left: 0px;
+    top: 26px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.signinup-group.sgli .group_left_icon::after{
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50%;
+    background-color: rgb(63, 59, 69);
+}
+
+.signinup-group .down-icon{
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 2px 2px 0px;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 14px;
+    top: 40px;
+    pointer-events: none;
+}
+
+.signinup-group select:hover,
+.signinup-group textarea:hover,
+.signinup-group input:hover {
+    border-color: white;
+    box-shadow: 0 0 1px 1px white;
+}
+
+.signinup-group textarea:focus,
+.signinup-group textarea:not(:placeholder-shown),
+.signinup-group select:focus,
+.signinup-group select:not(:placeholder-shown),
+.signinup-group input:focus,
+.signinup-group input:not(:placeholder-shown) {
+    border-color: var(--color2);
+    box-shadow: 0 0 1px 1px var(--color2);
+}
+
+.signinup-group textarea:not(:placeholder-shown)~.group__label,
+.signinup-group textarea:focus ~ .group__label,
+.signinup-group select:not(:placeholder-shown)~.group__label,
+.signinup-group select:focus ~ .group__label,
+.signinup-group input:not(:placeholder-shown)~.group__label,
+.signinup-group input:focus~.group__label {
+   color: white;
+}
+
+/* --- signinup-group-radio --- */
+.signinup-group-radio {
+    display: flex;
+    align-items: center;
+}
+
+.signinup-group-radio label {
+    cursor: pointer;
+    position: relative;
+    color: #f2f1f3;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 4px 0;
+    margin-right: 8px;
+    padding: 5px 16px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    text-transform: capitalize;
+    background-color: rgba(32, 30, 35, 0.5);
+    border: 1px solid rgb(63, 59, 69);
+    transition: 0.3s ease-in-out;
+}
+
+.signinup-group-radio label:hover {
+    color: white;
+    border-color: white;
+}
+
+.signinup-group-radio input:checked + label {
+    border-color: var(--color2);
+    background-color: var(--color2);
+    color: white;
+}
+
+/* --- otp-group --- */
+.signinup-group.otp-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 20px;
+}
+
+.signinup-group.otp-group input{
+    width: 45px;
+    height: 45px;
+    flex: 0 0 45px;
+    margin: 0 5px;
+    text-align: center;
+    padding: 0;
+}
+
+/* --- clear-input-icon --- */
+.clear-input-icon{
+    position: absolute;
+    right: -2px;
+    top: 26px;
+    width: 45px;
+    height: 45px;
+    transition: 0.3s ease-in-out;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.clear-input-icon:hover{
+    color: var(--color4);
+}
+
+.clear-input-icon svg{
+    width: 100%;
+    height: 100%;
+}
+
+/* ---
+Error Input color css
+--- */
+.signinup-group.error-group textarea,
+.signinup-group.error-group select,
+.signinup-group.error-group input{
+    border-color: var(--color4);
+    box-shadow: 0 0 1px 1px var(--color4);
+}
+
+.signinup-group.error-group .group__label{
+    color: var(--color4) !important;
+}
+
+/* Form Error Msg */
+.form-error-msg{
+    display: block;
+    text-align: right;
+    color: var(--color4);
+    font-size: 14px;
+    margin-bottom: -5px;
+    margin-top: 5px;
+}
+
+.form-error-msg .fa{
+    margin-right: 5px;
+}
+
+.form-error-msg::before{
+    content: "\f071";
+    font: normal normal normal 14px/1 FontAwesome;
+    margin-right: 5px;
+}
+
+/* --- Remember Input Checkbox --- */
+.signinup-group-checkmark{
+    margin: 15px 0 20px;
+    width: fit-content;
+}
+
+.signinup-group-checkmark label{
+    font-size: 14px;
+    color: #f2f1f3;
+    font-weight: 400;
+    margin: 0;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.signinup-group-checkmark label .checkmark-icon{
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+    border-radius: 5px;
+    margin-right: 8px;
+    background-color: transparent;
+    background-position: center;
+    box-shadow: 0 0 0px 4px rgb(63 59 69 / 0%) inset;
+    border: 2px solid rgb(63, 59, 69);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.signinup-group-checkmark label:hover .checkmark-icon{
+    border-color: var(--color2);
+}
+
+.signinup-group-checkmark input{
+    display: none;
+}
+
+.signinup-group-checkmark input:checked + label .checkmark-icon {
+    background-image: url(../img/icons/check.svg);
+    border-color: var(--color2);
+    background-color: var(--color2);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    box-shadow: none;
+}
+
+
+/* --- Common File Upload Css --- */
+.fileupload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 10px;
+    width: 100%;
+    min-height: 100px;
+    border-radius: 16px;
+    background-color: rgba(32, 30, 35, 0.5);
+    border: 1px solid rgb(63, 59, 69);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.fileupload .feud-img{
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+}
+
+.fileupload .feud-lable{
+    color: rgb(191, 186, 196);
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 15px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.fileupload .feud-lable span{
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+.fileupload:hover{
+    border-style: solid;
+    border-color: var(--color2);
+    box-shadow: 0 0 1px 1px var(--color2);
+}
+
+.fileupload:hover .feud-img{
+    opacity: 1;
+}
+
+.fileupload:hover .feud-lable{
+    color: white;
+}
+
+/* --- File Upload List --- */
+.dataupload-list,
+.fileupload-list{
+    display: block;
+    padding: 0;
+}
+
+.dataupload-list .dataupload-item,
+.fileupload-list .fileupload-item{
+    position: relative;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #00000070;
+    background-color: rgba(32, 30, 35, 0.5);
+    border: 1px solid rgb(63, 59, 69);
+    list-style-position: inside;
+    padding-right: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fileupload-list .fileupload-item img{
+    max-width: 150px;
+    width: 100%;
+    height: 90px;
+    border-radius: 5px;
+    object-fit: contain;
+    object-position: center;
+    background: #121114;
+    box-shadow: 0 0 10px 0px #00000070 inset;
+}
+
+.fileupload-list .fileupload-item.filstn{
+    list-style: none;
+}
+
+.dataupload-list .dataupload-item{
+    list-style: none;
+    padding-right: 40px;
+    padding: 6px 12px;
+}
+
+.dataupload-list .dataupload-item .dui-item{
+    font-size: 17px;
+}
+
+.dataupload-list .dataupload-item .dui-item span{
+    color: rgb(129, 122, 138);
+    font-size: 14px;
+    margin-left: 2px;
+    font-weight: 500;
+}
+
+.fileupload-list .fileupload-item .fileupload-play,
+.dataupload-list .dataupload-item .clear-input-icon,
+.fileupload-list .fileupload-item .clear-input-icon{
+    top: 4px;
+}
+
+.fileupload-list .fileupload-item .fileupload-play{
+    right: 45px;
+}
+
+.fileupload-video-popup{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.fileupload-video-popup{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.video-wraper-item{
+    position: relative;
+    width: 100%;
+    max-width: 992px;
+    height: 100%;
+}
+
+.video-wraper-item video{
+    position: absolute;
+    max-width: 100%;
+    width: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    object-position: center;
+    max-height: 100%;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+
+/* --- Input Autofill Css --- */
+.signinup-group input:-webkit-autofill,
+.signinup-group input:-webkit-autofill:hover,
+.signinup-group input:-webkit-autofill:focus,
+.signinup-group input:-webkit-autofill:active {
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    caret-color: white !important;
+    font-family: 'Cerebri', sans-serif !important;
+    -webkit-text-fill-color: white !important;
+    box-shadow: 0 0 1px 1px var(--color2), 0 0 0 100px rgb(32, 30, 35) inset !important;
+    -webkit-box-shadow: 0 0 1px 1px var(--color2), 0 0 0 100px rgb(32, 30, 35) inset !important;
+}
+
+
+/* --- login & submit btn --- */
+.common-submit-btn,
+.lsb-loader-btn,
+.login-submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 50px;
+    width: 100%;
+    font-weight: 400;
+    color: #f2f1f3;
+    font-size: 18px;
+    margin: 15px auto;
+    position: relative;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--color2);
+    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease;
+    max-width: 450px;
+    width: 100%;
+    letter-spacing: 0.5px;
+}
+
+.common-submit-btn[disabled],
+.login-submit-btn[disabled]{
+    opacity: 0.7; 
+}
+
+.common-submit-btn:hover,
+.login-submit-btn:hover{
+    color: white;
+}
+
+.common-submit-btn:active,
+.login-submit-btn:active{
+    transform: scale(0.95);
+}
+
+
+/* --- lsb loader btn --- */
+.lsb-loader-btn img{
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+    position: relative;
+    margin-right: 8px;
+    animation: rotation-btn 1s infinite linear;
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes rotation-btn {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* --- White Form --- */
+
+.form-white .signinup-group select,
+.form-white .signinup-group textarea,
+.form-white .signinup-group input {
+    font-weight: 500;
+    color: black;
+    background-color: white;
+}
+
+.form-white .signinup-group select:hover,
+.form-white .signinup-group textarea:hover,
+.form-white .signinup-group input:hover {
+    border-color: var(--color2);
+    box-shadow: 0 0 1px 1px var(--color2);
+}
+
+.form-white .signinup-group select::placeholder,
+.form-white .signinup-group textarea::placeholder,
+.form-white .signinup-group input::placeholder{
+    font-weight: 400;
+    color: gray;
+}
+
+.form-white .clear-input-icon{
+    top: 0px;
+    color: #e32600;    
+}

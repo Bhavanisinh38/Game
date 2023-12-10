@@ -1,0 +1,622 @@
+.gamesreen-main-bx{
+    padding: 15px;
+}
+
+.gamesreen-common-bx,
+.gamesreen-bx{
+    border-radius: 15px;
+    padding: 20px;
+    background-color: var(--color5);
+}
+
+.gamesreen-bx .gamesreen-inner{
+    position: relative;
+    height: 230px;
+}
+
+/* --- gamesreen mountains --- */
+.gi-mountains-bx{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.gi-mountains-bx .gi-mountain{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: center;
+    filter: brightness(0.5);
+    transition: background-position .3s ease-in-out;
+    /* animation: mountain-move 60s paused linear infinite; */
+}
+
+.gi-mountains-bx .gi-mountain.gim-1{
+    height: 30px;
+    background-image: url("../img/aitplane/mountain-(1).svg");
+}
+
+.gi-mountains-bx .gi-mountain.gim-2{
+    height: 60px;
+    /* animation-duration: 90s; */
+    background-image: url("../img/aitplane/mountain-(2).svg");
+}
+
+.gi-mountains-bx .gi-mountain.gim-3{
+    height: 90px;
+    /* animation-duration: 150s; */
+    background-image: url("../img/aitplane/mountain-(3).svg");
+}
+
+.gi-mountains-bx .gi-mountain.gim-4{
+    height: 120px;
+    /* animation-duration: 210s; */
+    background-image: url("../img/aitplane/mountain-(4).svg");
+}
+
+.gi-mountains-bx .gi-mountain.gim-5{
+    height: 160px;
+    /* animation-duration: 220s; */
+    background-image: url("../img/aitplane/mountain-(5).svg");
+}
+  
+@keyframes mountain-move{
+    to{background-position-x: -500em;}
+}
+
+/* --- gamesreen Dots --- */
+.dots{
+    position: absolute;   
+    background-size: contain;
+    transition: background-position .3s ease-in-out;
+}
+
+.dots-x{
+    width: 100%;
+    height: 5px;
+    left: 0px;
+    bottom: -10px;
+    background-image: url("../img/icons/dot-x.svg");
+    /* animation: dots-move-x 40s paused linear infinite; */
+}
+
+.dots-y{
+    width: 5px;
+    height: 100%;
+    top: 0px;
+    left: -10px;
+    background-image: url("../img/icons/dot-y.svg");
+    /* animation: dots-move-y 40s paused linear infinite; */
+}
+
+
+@keyframes dots-move-x {
+    to{background-position-x: -500em;}
+}
+
+@keyframes dots-move-y {
+    to{background-position-y: 500em;}
+}
+
+
+/* --- gamesreen airplane & crash --- */
+.gi-airplane-bx{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 10px;
+    height: 15px;
+    transition: all 0.3s ease-in-out;
+    /* animation: airplane-move 5s linear paused forwards; */
+    z-index: 1;
+}
+
+.gi-airplane-bx::after{
+    content: " ";
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color6);
+    border-radius: 50%;
+    z-index: -1;
+    display: none;
+}
+
+.gi-airplane-bx > img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: none;
+}
+
+@keyframes airplane-move {
+    to{
+        width: calc(100% - 50px);
+        height: calc(100% - 25px);
+    }
+}
+
+.gi-img-item{
+    width: 76px;
+    height: 50px;
+    position: absolute;
+    right: -30px;
+    top: -20px;
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+} 
+
+.gi-img-item.gi-airplane{
+    transform: rotate(-25deg);
+    background-image: url("../img/aitplane/airplane.png");
+    animation: steps-sprite steps(47, start) 3s infinite;
+}
+
+@keyframes steps-sprite{
+    to{background-position-x:100%}
+}
+
+.gi-img-item.crash-img{
+    height: 76px;
+    width: 76px;
+    right: -40px;
+    top: -30px;
+    background-image: url("../img/aitplane/aitplane-crash.png");
+    animation:steps-crash-sprite steps(24, start) 2s 1 forwards;
+    display: none;
+}
+
+@keyframes steps-crash-sprite{
+    to{background-position-x:100%}
+}
+
+
+/* --- gamesreen countdown --- */
+.game-end .gi-countdown-bx,
+.game-start .gi-countdown-bx{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.gi-countdown-bx{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in-out;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.gi-countdown-bx .gi-countdown{
+    font-size: 36px;
+    font-weight: 600;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+.gi-countdown-bx .gi-step-indicator{
+    position: absolute;
+    bottom: 25px;
+    right: -75px;
+    width: 100%;
+    animation: circle-bounce 1s .7s linear infinite;
+}
+
+.gi-countdown-bx .gi-step-indicator::after{
+    display: block;
+    content: " ";
+    position: relative;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+}
+
+@keyframes circle-bounce{
+    70%{transform:rotate(0deg)}
+    
+    80%{transform:rotate(-11deg)}
+    
+    90%{transform:rotate(-2deg)}
+    
+    0%,40%,100%{transform:rotate(-7deg)}
+}
+
+.gi-countdown-bx .gi-step-bx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -45px;
+    bottom: -30px;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-30deg);
+    transition: transform 0.7s ease-in-out;
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item{
+    position: absolute;
+    width: 100%;
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item::after{
+    display: block;
+    content: " ";
+    position: relative;
+    border-radius: 3px;
+    width: 8px;
+    height: 5px;
+    background-color: white;
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item.lastgsi:after{
+    background-color: var(--color6);
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(1){
+    transform: rotate(0deg);
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(2){
+    transform: rotate(30deg);
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(3){
+    transform: rotate(60deg);
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(4){
+    transform: rotate(90deg);
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(5){
+    transform: rotate(120deg);
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(6){
+    transform: rotate(150deg);
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(7){
+    transform: rotate(180deg);
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(8){
+    transform: rotate(210deg);
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(9){
+    transform: rotate(240deg);
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(10){
+    transform: rotate(270deg);
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(11){
+    transform: rotate(300deg);
+}
+
+.gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(12){
+    transform: rotate(330deg);
+}
+
+
+/* --- Gamesreen Win Indicator --- */
+.gi-win-indicator{
+    font-size: 36px;
+    font-weight: 600;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    color: #f2f1f3;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s ease-in-out;
+}
+
+.gi-win-indicator.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* --- Gamesreen Waiting --- */
+.gi-waiting{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    left: -20px;
+    bottom: -20px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.gi-waiting.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.gi-waiting .gi-waiting-img{
+    margin-top: -30px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gi-waiting .gi-waiting-img .gi-wi-after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/aitplane/airplane-shine.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    animation: gi-wi-after-rotate 15s infinite;
+}
+
+@keyframes gi-wi-after-rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.gi-waiting .gi-waiting-img .gi-wi-airplane{
+    position: relative;
+    z-index: 1;
+    width: 76px;
+    height: 50px;
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../img/aitplane/airplane.png");
+    animation: steps-sprite steps(47, start) 3s infinite;
+}
+
+.gi-waiting .gi-wi-text{
+    margin-top: -40px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+    
+
+/* --- Game start --- */
+.game-start .gi-airplane-bx{
+    animation: airplane-move 5s linear paused forwards;
+}
+
+.game-start .gi-mountains-bx .gi-mountain{
+    animation: mountain-move 60s paused linear infinite;
+}
+
+.game-start .gi-mountains-bx .gi-mountain.gim-2{
+    animation-duration: 90s;
+}
+
+.game-start .gi-mountains-bx .gi-mountain.gim-3{
+    animation-duration: 150s;
+}
+
+.game-start .gi-mountains-bx .gi-mountain.gim-4{
+    animation-duration: 210s;
+}
+
+.game-start .gi-mountains-bx .gi-mountain.gim-5{
+    animation-duration: 250s;
+}
+
+.game-start .dots-x{
+    animation: dots-move-x 60s paused linear infinite;
+}
+
+.game-start .dots-y{
+    animation: dots-move-y 60s paused linear infinite;
+}
+
+
+.game-start .gi-img-item.gi-airplane,
+.game-start .gi-airplane-bx::after,
+.game-start .gi-airplane-bx > img{
+    display: block;
+}
+
+.game-start .gi-airplane-bx,
+.game-start .gi-mountains-bx .gi-mountain,
+.game-start .dots-x,
+.game-start .dots-y{
+    animation-play-state: running;
+}
+
+
+/* --- Game End --- */
+.game-end .gi-airplane-bx,
+.game-end .dots-x,
+.game-end .dots-y,
+.game-end .gi-mountains-bx .gi-mountain{
+    animation-play-state: paused;
+}
+
+.game-end .gi-airplane-bx > img,
+.game-end .gi-airplane-bx::after,
+.game-end .gi-img-item.gi-airplane{
+    display: none;
+}
+
+.game-end .gi-img-item.crash-img{
+    display: block;
+}
+
+@media (max-width:992px) {
+    .gamesreen-main-bx{
+        padding: 0px;
+    }
+    .gamesreen-bx{
+        border-radius: 0;
+        padding-right: 0;
+        padding-top: 0;
+    }
+
+    @keyframes airplane-move {
+        to{
+            width: calc(100% - 50px);
+            height: calc(100% - 50px);
+        }
+    }
+
+    .gi-waiting{
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);;
+        border-radius: 0px;
+    }
+}
+
+@media (max-width:576px) {
+    .gi-img-item.gi-airplane{
+        transform: rotate(-45deg);
+    }
+}
+
+
+/* --- Game Btns Designs --- */
+
+.gcb-heading{
+    color: #f2f1f3;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.beting-btns-group{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.beting-btns-group .beting-btn{
+    color: white;
+    padding: 3px 10px;
+    flex: 0 1 16.33%;
+    width: 16.33%;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+    transform: scale(0.9);
+    margin: 0 0 8px 0;
+    border: 1px solid var(--color2);
+    background-color: var(--color2-300);
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media (min-width:992px) {
+    .beting-btns-group .beting-btn:hover{
+        border: 1px solid var(--color6);
+        background-color: var(--color6);
+    } 
+}
+
+
+.beting-btns-group .beting-btn:active{
+    border: 1px solid var(--color6);
+    background-color: var(--color6);
+}
+
+.beting-place_take-btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.beting-place_take-btns button{
+    width: 49%;
+    flex: 0 0 49%;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: capitalize;
+    opacity: 0.9;
+}
+
+.beting-place_take-btns button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.beting-place_take-btns button:nth-child(1){
+    border: 1px solid var(--color6);
+    background-color: var(--color6);
+    color: white;
+}
+
+.beting-place_take-btns button:nth-child(2){
+    border: 1px solid var(--color7);
+    background-color: var(--color7);
+    color: white;
+}
+
+.beting-place_take-btns button:not([disabled]):hover{
+    opacity: 1;
+}
+
+
+@media (max-width:768px) {
+    .beting-btns-group .beting-btn{
+        flex: 0 1 20%;
+        width: 20%;
+    }
+}
+
+@media (max-width:576px) {
+    .gamesreen-common-bx{
+          padding: 20px 10px;  
+    }
+
+    .beting-btns-group .beting-btn{
+        flex: 0 1 25%;
+        width: 25%;
+    }
+}
