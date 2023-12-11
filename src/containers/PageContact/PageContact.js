@@ -45,7 +45,7 @@ export default function PageContact() {
             <section className="mb-5">
                 <div className="container-lg">
                     <div className="lagle-heading">Contact</div>
-                    <div className="row justify-content-center mt-4">
+                    <div className="row justify-content-center mt-2 mt-lg-4">
 
                         <div className="col-md-6 mt-3 mt-md-0 order-2 order-md-1">
                             <div className="row">

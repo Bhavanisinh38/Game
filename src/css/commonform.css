@@ -20,7 +20,7 @@ input[type=number] {
 
 .signinup-group {
     position: relative;
-    margin: 0px 0 10px;
+    margin: 0px 0 15px;
 }
 
 .signinup-group select,
@@ -212,6 +212,27 @@ input[type=number] {
     margin: 0 5px;
     text-align: center;
     padding: 0;
+}
+
+/* --- Signinup group nots --- */
+.signinup-group-nots{
+    background: var(--color1-500);
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.signinup-group-nots span {
+    font-size: 13px;
+    color: #f2f1f3;
+    font-weight: 500;
+}
+
+.signinup-group-nots p {
+    color: #bfbac4;
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.5;
 }
 
 /* --- clear-input-icon --- */
@@ -598,4 +619,10 @@ Error Input color css
 .form-white .clear-input-icon{
     top: 0px;
     color: #e32600;    
+}
+
+@media (max-width:576px) {
+    .signinup-group-nots{
+        background: var(--color2-200);
+    }
 }

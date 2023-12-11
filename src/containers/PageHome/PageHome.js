@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 import "../../css/gamesreen.css";
 
 // Design File
+import Subloader from "../../components/Subloader"
 import PageGamesreen from "./PageGamesreen";
 import PageGamebtn from "./PageGamebtn";
 
@@ -15,6 +16,7 @@ export default function PageHome() {
         <title>Game</title>
       </Helmet>
 
+      <Subloader />
       <PageGamesreen />
       <PageGamebtn />
     </>

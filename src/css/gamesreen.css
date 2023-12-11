@@ -12,6 +12,7 @@
 .gamesreen-bx .gamesreen-inner{
     position: relative;
     height: 230px;
+    user-select: none;
 }
 
 /* --- gamesreen mountains --- */
@@ -252,6 +253,14 @@
     height: 100%;
     transform: rotate(-30deg);
     transition: transform 0.7s ease-in-out;
+}
+
+
+.gi-countdown-bx .gi-step-bx.hidesomestpe .gi-step-item:nth-child(4),
+.gi-countdown-bx .gi-step-bx.hidesomestpe .gi-step-item:nth-child(3),
+.gi-countdown-bx .gi-step-bx.hidesomestpe .gi-step-item:nth-child(2),
+.gi-countdown-bx .gi-step-bx.hidesomestpe .gi-step-item:nth-child(1){
+    opacity: 0;
 }
 
 .gi-countdown-bx .gi-step-bx .gi-step-item{

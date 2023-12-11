@@ -13,7 +13,7 @@ export default function Footer() {
 
                     <div className="col-12">
                         <div className="footer-links-bx justify-content-center">
-                            <NavLink to="/" className="footer-link">Home</NavLink>
+                            <NavLink to="/" className="footer-link">Game</NavLink>
                             <NavLink to="/about" className="footer-link">About</NavLink>
                             <NavLink to="/faqs" className="footer-link">FAQs</NavLink>
                             <NavLink to="/privacy" className="footer-link">Privacy</NavLink>

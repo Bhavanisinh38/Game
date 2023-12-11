@@ -158,6 +158,25 @@
     opacity: 1;
 }
 
+.account-menu-bx .amb-link .amb-num{
+    position: absolute;
+    left: 24px;
+    top: 5px;
+    z-index: 1;
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+    background-color: var(--color2);
+    background-image: linear-gradient(-45deg, var(--color7), var(--color6));
+    display: block;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 11px;
+}
+
 /* --- Account Right --- */
 .account-right{
     flex: 1 0 calc(100% - 300px);
@@ -188,6 +207,12 @@
 .amib-768-width{
     width: 100%;
     max-width: 768px;
+    margin: auto;
+}
+
+.amib-576-width{
+    width: 100%;
+    max-width: 576px;
     margin: auto;
 }
 
@@ -355,6 +380,13 @@
     margin-top: -5px;
 }
 
+
+.wallet-amount-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .wallet-amount-bx .add-money-btn{
     display: flex;
     justify-content: center;
@@ -375,6 +407,18 @@
     transition: background-position 0.3s ease-in-out, transform 0.3s ease;
     letter-spacing: 0.5px;
     margin-top: 40px;
+    margin: 0 5px;
+}
+
+.wallet-amount-bx .add-money-btn.withdrawal-btn{
+    background-image: linear-gradient(-45deg, var(--color3), var(--color3-700));
+}
+
+.wallet-amount-bx .add-money-btn:last-child{
+    margin-right: 0;
+}
+.wallet-amount-bx .add-money-btn:first-child{
+    margin-left: 0;
 }
 
 .wallet-amount-bx .add-money-btn:hover{
@@ -434,6 +478,80 @@
 }
 
 /* --- Wallet page css end --- */
+
+
+/* --- Notifications page css strat --- */
+.nlb-outer{
+    margin-bottom: 15px;
+}
+
+.nlb-outer:last-child{
+    margin-bottom: 0;
+}
+
+.nlb-outer-label{
+    font-size: 14px;
+    font-weight: 400;
+    color: #f2f1f3;
+    margin-bottom: -0px;
+}
+
+.nlb-item{
+    position: relative;
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid rgb(63, 59, 69);
+    cursor: pointer;
+}
+
+.nlb-item.nlb-new::after{
+    content: " ";
+    position: absolute;
+    left: 30px;
+    top: 17px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color2);
+    background-image: linear-gradient(-45deg, var(--color7), var(--color6));
+}
+
+.nlb-item:last-child{
+    border-bottom: none;
+}
+
+.nlb-item .nlb-icon{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    background-color: var(--color2-200);
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nlb-item:hover .nlb-icon{
+    color: white;
+    background-color: var(--color2);
+}
+
+.nlb-item .nlb-data .nlb-lable{
+    color: #f2f1f3;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.nlb-item .nlb-data .nlb-text{
+    color: rgb(129, 122, 138);
+    font-size: 14px;
+    font-weight: 400;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+/* --- Notifications page css strat --- */
 
 
 @media screen and (max-width:992px) {
@@ -512,20 +630,26 @@
         flex-direction: column;
         justify-content: center;
         align-items: start;
+        padding: 15px 10px;
     }
 
     .wallet-amount-bx .wab-data-bx{
         margin-bottom: 20px;
     }
 
+    .wallet-amount-btns{
+        width: 100%;
+        justify-content: space-between;
+    }
+
     .wallet-amount-bx .add-money-btn{
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
         margin-top: 0;
     }
 
     .wallet-amount-bx .walletgrapics{
         right: -14px;
-        bottom: 0;
+        bottom: 14px;
         width: 220px;
     }
 

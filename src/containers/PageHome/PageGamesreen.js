@@ -11,6 +11,7 @@ export default function PageGamesreen() {
   const [waiting, setWaiting] = useState(false);
   const [winIndicatorShow, setWinIndicatorShow] = useState(false);
   const [winCounter, setWinCounter] = useState(1);
+  const GSBX = document.querySelector('.gi-step-bx');
 
   const WinCounterIntervalRef = useRef(null);
 
@@ -38,18 +39,18 @@ export default function PageGamesreen() {
       setTimeout(() => {
         setWinIndicatorShow(false);
         setWaiting(true);
-        clearInterval(WinCounterIntervalRef.current);
       }, 2000);
       
       setTimeout(() => {
         clearInterval(WinCounterIntervalRef.current);
+        GSBX.classList.remove('hidesomestpe');
       }, 0);
 
 
     }, randomTimeout);
 
     return () => clearTimeout(timeoutId);
-  }, []);
+  }, [GSBX]);
 
   const updateRotation = useCallback(() => {
     setRotationAngle((prevAngle) => (prevAngle - 30) % 360);
@@ -75,6 +76,9 @@ export default function PageGamesreen() {
         if (countdown > 0) {
           setCountdown((prevCountdown) => prevCountdown - 1);
           updateRotation();
+          if (countdown === 4) {
+            GSBX.classList.add('hidesomestpe');
+          }
         } else {
           clearInterval(countdownInterval);
           startGame();
@@ -85,7 +89,7 @@ export default function PageGamesreen() {
 
       return () => clearInterval(countdownInterval);
     }
-  }, [isGameEnd, countdown, startGame, updateRotation]);
+  }, [isGameEnd, countdown, GSBX, startGame, updateRotation]);
 
   return (
     <>

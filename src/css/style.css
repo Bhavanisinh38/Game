@@ -218,6 +218,60 @@ body{
 }
 
 
+/* --- Sub Loader --- */
+.sub-loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: calc(100%);
+    z-index: 1199;
+    background-color: var(--color1-800);
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-loader.hide{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s 0.3s ease, visibility 0.3s 0.3s ease;
+}
+
+.sub-loader .sub-inner{
+    width: 180px;
+    height: 180px;
+    flex: 0 0 180px;
+    border-radius: 50%;
+    border: 3px solid var(--color2-300);
+    border-left-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s linear;
+    animation: sub-inner-rotate 0.5s linear infinite;
+}
+
+.sub-loader .sub-inner::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/icons/wifi.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    opacity: 0.5;
+    animation: sub-inner-rotate 0.5s linear reverse infinite;
+}
+
+.sub-loader .sub-loader-text{
+    margin-top: 15px;
+}
+
+
 /* --- main-wrapper --- */
 .main-wrapper{
     min-height: calc(100vh - 60px);
@@ -486,7 +540,7 @@ body{
 .ct-data-bx .ct-lable{
     color: #f2f1f3;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .ct-data-bx .ct-amount-lable,
@@ -494,7 +548,78 @@ body{
     color: #BFBAC4;
     font-size: 14px;
 }
+
+.ct-data-bx .ct-amount,
+.ct-data-bx .ct-amount-lable{
+    text-align: right;
+    white-space: nowrap;
+}
+
+.ct-data-bx.ct-added .ct-amount-lable,
+.ct-data-bx.ct-less .ct-amount-lable{
+    color: white;
+}
+
+.ct-data-bx.ct-less .ct-amount{
+    color: var(--color4);
+}
+
+.ct-data-bx.ct-added .ct-amount{
+    color: var(--color3);
+}
 /* --- Common Table Css End --- */
+
+
+/* --- Empty Box Css start --- */
+.empty-div-bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0;
+    width: 100%;
+    min-height: 220px;
+    border-radius: 5px;
+    padding: 30px 10px;
+}
+
+.empty-div-bx .empty-img {
+    width: 70px;
+    display: block;
+    filter: invert(1);
+}
+
+.empty-div-bx .empty-heading {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.empty-div-bx .empty-sub-heading {
+    color: rgb(191, 186, 196);
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 3px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.empty-div-bx .empty-btn {
+    color: white;
+    padding: 6px 15px;
+    background-color: #302d34;
+    border-radius: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.empty-div-bx .empty-btn:hover {
+    background-color: #44404a;
+}
+/* --- Empty Box Css End--- */
 
 
 /* --- Lagal pages css start --- */

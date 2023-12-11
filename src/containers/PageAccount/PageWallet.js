@@ -11,23 +11,24 @@ import capture from '../../img/icons/capture.png';
 import Commonlayout from "./Commonlayout";
 
 
-export default function PageAccount() {
+export default function PageWallet() {
 
     // Screen section Tabbing Js
-    const [addmoney, setAddmoney] = useState(false);
+    const [addWlmoney, setAddWlmoney] = useState('mainscreen');
     const [amibSection, setAmibSection] = useState('QRCode');
 
-    const handleaddmoney = ()=>{
-        setAddmoney(true);
+    const handleaddmoneycancel = ()=>{
+        setAddWlmoney("mainscreen");
     };
 
-    const handleaddmoneycancel = ()=>{
-        setAddmoney(false);
+    const handleaddWlmoney = (addWlmoneyId) => {
+        setAddWlmoney(addWlmoneyId);
     };
 
     const handleAmibSection = (AmibSectionId) => {
         setAmibSection(AmibSectionId);
     };
+    
 
     const [selectedFiles, setSelectedFiles] = useState([]);
 
@@ -63,40 +64,39 @@ export default function PageAccount() {
 
     {/* --- Profile Bx Start --- */}
     <div className='amib-inner-item'>
-        <div className="amib-900-width">
-            <div className="amib-i-header">
-                {addmoney ? (
-                <>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                    </svg>
-                    Add money to wallet
 
-                    <div className='amib-i-cancel' onClick={handleaddmoneycancel}>Cancel</div>
-                </>
-                ) : (
-                <>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
-                    </svg>
-                    Wallet
-                </>
-                )}
+        {/* --- Mainscreen Section --- */}
+        <div className={`amib-900-width ${addWlmoney === 'mainscreen' ? '' : 'd-none'} `} id="mainscreen">
+            <div className="amib-i-header">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
+                </svg>
+                Wallet
             </div>
 
-            <div className={`amib-item amib-item-bg-none p-0 rounded-0 ${addmoney ? 'd-none' : ''} `}>
+            <div className="amib-item amib-item-bg-none p-0 rounded-0">
                 <form action="">
                     <div className="wallet-amount-bx">
                         <div className="wab-data-bx">
                             <div className="wdb-money">$99,99,999</div>
                             <div className="wdb-lable">Current wallet ballance</div>
                         </div>
-                        <button className="add-money-btn" type="button" onClick={handleaddmoney}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                            </svg>
-                            Add money to wallet
-                        </button>
+
+                        <div className="wallet-amount-btns">
+                            <button className="add-money-btn" type="button" onClick={() => handleaddWlmoney('addmoney')}>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                                Add money
+                            </button>
+                            <button className="add-money-btn withdrawal-btn" type="button" onClick={() => handleaddWlmoney('withdrawalmoney')}>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                                </svg>
+                                Withdrawal
+                            </button>
+                        </div>
+
                         <img className="walletgrapics" src={walletgrapics} alt="walletgrapics" />
                     </div>
                 </form>
@@ -135,8 +135,8 @@ export default function PageAccount() {
                                 </td>
                                 <td>
                                     <div className="ct-data-bx">
-                                        <div className="ct-amount-lable">Withdrawel</div>
-                                        <div className="ct-amount">$10,000</div>
+                                        <div className="ct-amount-lable">Processing...</div>
+                                        <div className="ct-amount">$5000</div>
                                     </div>
                                 </td>
                             </tr>
@@ -144,19 +144,19 @@ export default function PageAccount() {
                             <tr>
                                 <td>
                                     <div className="ct-data-outer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
                                         </svg>
                                         <div className="ct-data-bx">
-                                            <div className="ct-lable">Bank Account To Wallet</div>
+                                            <div className="ct-lable">Bet amount $5000</div>
                                             <div className="ct-date">06/12/23</div>
                                         </div>
                                     </div>
                                 </td>
                                 <td>
-                                    <div className="ct-data-bx">
-                                        <div className="ct-amount-lable">Deposit</div>
-                                        <div className="ct-amount">$10,000</div>
+                                    <div className="ct-data-bx ct-less">
+                                        <div className="ct-amount-lable">Lost</div>
+                                        <div className="ct-amount">- $5000</div>
                                     </div>
                                 </td>
                             </tr>
@@ -164,39 +164,19 @@ export default function PageAccount() {
                             <tr>
                                 <td>
                                     <div className="ct-data-outer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
                                         </svg>
                                         <div className="ct-data-bx">
-                                            <div className="ct-lable">Wallet To Bank Account</div>
+                                            <div className="ct-lable">Bet amount $5000</div>
                                             <div className="ct-date">06/12/23</div>
                                         </div>
                                     </div>
                                 </td>
                                 <td>
-                                    <div className="ct-data-bx">
-                                        <div className="ct-amount-lable">Withdrawel</div>
-                                        <div className="ct-amount">$10,000</div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <div className="ct-data-outer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
-                                        </svg>
-                                        <div className="ct-data-bx">
-                                            <div className="ct-lable">Bank Account To Wallet</div>
-                                            <div className="ct-date">06/12/23</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div className="ct-data-bx">
-                                        <div className="ct-amount-lable">Deposit</div>
-                                        <div className="ct-amount">$10,000</div>
+                                    <div className="ct-data-bx ct-added">
+                                        <div className="ct-amount-lable">Win 2x</div>
+                                        <div className="ct-amount">+ $10000</div>
                                     </div>
                                 </td>
                             </tr>
@@ -214,29 +194,9 @@ export default function PageAccount() {
                                     </div>
                                 </td>
                                 <td>
-                                    <div className="ct-data-bx">
-                                        <div className="ct-amount-lable">Withdrawel</div>
-                                        <div className="ct-amount">$10,000</div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <div className="ct-data-outer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
-                                        </svg>
-                                        <div className="ct-data-bx">
-                                            <div className="ct-lable">Bank Account To Wallet</div>
-                                            <div className="ct-date">06/12/23</div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div className="ct-data-bx">
-                                        <div className="ct-amount-lable">Deposit</div>
-                                        <div className="ct-amount">$10,000</div>
+                                    <div className="ct-data-bx ct-less">
+                                        <div className="ct-amount-lable">Withdrawal</div>
+                                        <div className="ct-amount">- $5,000</div>
                                     </div>
                                 </td>
                             </tr>
@@ -254,9 +214,9 @@ export default function PageAccount() {
                                     </div>
                                 </td>
                                 <td>
-                                    <div className="ct-data-bx">
-                                        <div className="ct-amount-lable">Withdrawel</div>
-                                        <div className="ct-amount">$10,000</div>
+                                    <div className="ct-data-bx ct-less">
+                                        <div className="ct-amount-lable">Withdrawal</div>
+                                        <div className="ct-amount">- $5,000</div>
                                     </div>
                                 </td>
                             </tr>
@@ -274,9 +234,9 @@ export default function PageAccount() {
                                     </div>
                                 </td>
                                 <td>
-                                    <div className="ct-data-bx">
+                                    <div className="ct-data-bx ct-added">
                                         <div className="ct-amount-lable">Deposit</div>
-                                        <div className="ct-amount">$10,000</div>
+                                        <div className="ct-amount">+ $20,000</div>
                                     </div>
                                 </td>
                             </tr>
@@ -288,8 +248,21 @@ export default function PageAccount() {
 
             </div>
 
-            <div className={`amib-item pb-2 ${addmoney ? '' : 'd-none'} `} style={{position:"relative"}}>
+        </div>
 
+        {/* --- Addmoney Section --- */}
+        <div className={`amib-900-width ${addWlmoney === 'addmoney' ? '' : 'd-none'} `} id="addmoney">
+
+            <div className="amib-i-header">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+                Add money to wallet
+
+                <div className='amib-i-cancel' onClick={handleaddmoneycancel}>Cancel</div>
+            </div>
+
+            <div className="amib-item pb-2">
                 <div className="amib-inner-tabbx commonscrollbarhide mt-4 mt-md-0">
                     <div className={`ait-link ${amibSection === 'QRCode' ? 'active' : ''}`} onClick={() => handleAmibSection('QRCode')}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -400,10 +373,52 @@ export default function PageAccount() {
                         </form>
                     </div>
                 </div>
-  
             </div>
 
         </div>
+
+        {/* --- Withdrawalmoney Section --- */}
+        <div className={`amib-576-width ${addWlmoney === 'withdrawalmoney' ? '' : 'd-none'} `} id="withdrawalmoney">
+
+            <div className="amib-i-header">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                </svg>
+                Withdrawal money
+                <div className='amib-i-cancel' onClick={handleaddmoneycancel}>Cancel</div>
+            </div>
+
+            <div className="amib-item pb-2">
+                <form action="">
+
+                    <div className="row">
+
+                        <div className="col-sm-12">
+                            <div className="signinup-group">
+                                <div className="group__label">Amount</div>
+                                <input type="text" placeholder="Enter amount"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="signinup-group-nots">
+                        <span>Please note:</span>
+                        <p>Withdrawal amount will be transferred to your bank account after admin approval.</p>
+                    </div>
+
+                    <div className="amib-save-btn-bx mt-1">
+                        <button type="button" className="common-submit-btn">Submit</button>
+                        <div className="lsb-loader-btn">
+                            <img src={Img.loading} alt="Please wait" />Please wait ....
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
     </div>
     {/* --- Profile Bx End --- */}
 

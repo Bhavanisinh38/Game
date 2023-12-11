@@ -19,10 +19,13 @@ import location from '../img/icons/location.svg'
 
 // Icons Images
 import loading from '../img/icons/loading.png'
+import success from '../img/icons/success.png'
+import error from '../img/icons/error.png'
+import empty from '../img/icons/empty.png'
 
 export { 
     icon, icon_white,
     logo, logo_white,
     company, email, phone, location,
-    loading,
+    loading, success, error, empty,
 };
