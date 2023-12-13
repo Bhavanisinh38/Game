@@ -68,7 +68,7 @@ const MyRoutes = () => {
   const location = useLocation();
 
   const pathsToHideheader = ['/signin', '/signup', '/signotp'];
-  const pathsToHidefooter = ['/signin', '/signup', '/signotp'];
+  const pathsToHidefooter = ['/signin', '/signup', '/signotp', '/account', '/wallet', '/bankaccount', '/notifications' ];
   const hideheader = pathsToHideheader.includes(location.pathname);
   const hidefooter = pathsToHidefooter.includes(location.pathname);
 
