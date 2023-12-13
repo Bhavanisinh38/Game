@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+// Design Files
+import PageGamehistory from './PageGamehistory';
+
 export default function PageGamebtn() {
 
     // Input Field js
@@ -21,10 +24,15 @@ export default function PageGamebtn() {
   return (
 
     <>
-    <div className="mt-3 mt-lg-2 mb-5">
+    <div className="mt-3 mt-lg-2 pb-5">
       <div className="container-lg">
         <div className="row justify-content-center">
-          <div className='col-lg-6'>
+
+          <div className="col-lg-7 order-2 order-lg-1 mt-3 mt-lg-0">
+            <PageGamehistory />
+          </div>
+
+          <div className="col-lg-5 order-1 order-lg-2">
             <div className="gamesreen-common-bx">
 
               <div className="gcb-heading">Stake Selector</div>
@@ -60,6 +68,7 @@ export default function PageGamebtn() {
 
             </div>
           </div>
+
         </div>
       </div>
     </div>

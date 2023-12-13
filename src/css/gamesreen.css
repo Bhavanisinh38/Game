@@ -22,6 +22,12 @@
     top: 0;
     width: 100%;
     height: 100%;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.gi-mountains-bx.active{
+    opacity: 0;
 }
 
 .gi-mountains-bx .gi-mountain{
@@ -201,6 +207,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+    visibility: visible;
     transition: all 0.1s ease-in-out;
     overflow: hidden;
     z-index: 2;
@@ -353,7 +361,7 @@
 /* --- Gamesreen Waiting --- */
 .gi-waiting{
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     width: calc(100% + 40px);
     height: calc(100% + 40px);
     left: -20px;
@@ -367,6 +375,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(5px);
 }
 
 .gi-waiting.active{
@@ -627,5 +636,60 @@
     .beting-btns-group .beting-btn{
         flex: 0 1 25%;
         width: 25%;
+    }
+}
+
+
+/* --- Gamesreen Table --- */
+
+.gs-table-radius{
+    border-radius: 10px;   
+    overflow: hidden; 
+}
+
+.gs-table-heading-bx .gs-table-heading-item{
+    font-size: 14px;
+    padding: 5px 10px;
+    background-image: linear-gradient(-45deg, var(--color7), var(--color6));
+}
+
+.gs-table-heading-bx .gs-table-heading-item svg{
+    width: 17px;
+    height: 17px;
+    position: relative;
+    top: -1px;
+}
+
+.gs-table-responsive{
+    height: calc(213.78px - 33.8px);
+    overflow: auto;
+    border-radius: 0;
+}
+
+.gs-table-responsive .custom-table thead{
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid rgb(63, 59, 69);
+}
+
+.gs-table-responsive .custom-table thead tr{
+    background: #090e2a;
+}
+
+.gs-table-responsive .custom-table thead tr th{
+    padding: 4px 10px;
+}
+
+.gs-table-responsive .custom-table tbody tr td,
+.gs-table-responsive .custom-table thead tr th{
+    font-size: 12px;
+    width: auto;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+@media (max-width:992px) {
+    .gs-table-responsive{
+        height: auto;
     }
 }

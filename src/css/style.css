@@ -485,6 +485,23 @@ body{
     background-color: var(--color5);
 }
 
+.ctr-scrollbar::-webkit-scrollbar{
+    width: 1px;
+    height: 1px;
+}
+
+.ctr-scrollbar::-webkit-scrollbar-track{
+    border-radius: 50px;
+    background-color: var(--color7);
+}
+
+.ctr-scrollbar::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+}
+
+
+
 .custom-table{
     width: 100%;
 }
@@ -560,10 +577,12 @@ body{
     color: white;
 }
 
+.custom-table tbody tr.lost-game,
 .ct-data-bx.ct-less .ct-amount{
     color: var(--color4);
 }
 
+.custom-table tbody tr.win-game,
 .ct-data-bx.ct-added .ct-amount{
     color: var(--color3);
 }

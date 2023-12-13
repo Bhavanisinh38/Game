@@ -8,6 +8,7 @@ export default function PageGamesreen() {
   const [isGameEnd, setIsGameEnd] = useState(false);
   const [countdown, setCountdown] = useState(10);
   const [rotationAngle, setRotationAngle] = useState(-30);
+  const [mountains, setMountains] = useState(false);
   const [waiting, setWaiting] = useState(false);
   const [winIndicatorShow, setWinIndicatorShow] = useState(false);
   const [winCounter, setWinCounter] = useState(1);
@@ -27,9 +28,17 @@ export default function PageGamesreen() {
       setIsGameEnd(true);
 
       setTimeout(() => {
-        setIsGameStarted(false);
+        setMountains(false);
+      }, 5100);
+
+      setTimeout(() => {
         setIsGameEnd(false);
+        setIsGameStarted(false);
       }, 5000);
+
+      setTimeout(() => {
+        setMountains(true);
+      }, 4800);
       
       setTimeout(() => {
         setCountdown(10);
@@ -104,7 +113,7 @@ export default function PageGamesreen() {
                 <img src={giplanelg} alt="" />
               </div>
 
-              <div className="gi-mountains-bx">
+              <div className={`gi-mountains-bx ${mountains ? "active" : "" }`}>
                 <div className="gi-mountain gim-5"></div>
                 <div className="gi-mountain gim-4"></div>
                 <div className="gi-mountain gim-3"></div>
