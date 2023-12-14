@@ -246,6 +246,13 @@ export default function PageWallet() {
                     </table>
                 </div>
 
+                <div className="amib-save-btn-bx mt-4">
+                    <button type="button" className="common-submit-btn">Load More</button>
+                    <div className="lsb-loader-btn">
+                        <img src={Img.loading} alt="Please wait" />Please wait ....
+                    </div>
+                </div>
+
             </div>
 
         </div>
