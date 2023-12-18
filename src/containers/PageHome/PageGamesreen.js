@@ -20,7 +20,7 @@ export default function PageGamesreen() {
     setIsGameStarted(true);
     setWinIndicatorShow(true);
 
-    const maxTimeout = 10000;
+    const maxTimeout = 60000;
     const minTimeout = 0;
     const randomTimeout = Math.floor(Math.random() * (maxTimeout - minTimeout + 1) + minTimeout);
 
@@ -102,8 +102,7 @@ export default function PageGamesreen() {
 
   return (
     <>
-      <section className={`gamesreen-main-bx ${isGameStarted ? 'game-start' : ''} ${isGameEnd ? 'game-end' : ''}`}>
-        <div className="container-lg px-0">
+      <div className={`gamesreen-main-bx ${isGameStarted ? 'game-start' : ''} ${isGameEnd ? 'game-end' : ''}`}>
           <div className="gamesreen-bx">
             <div className="gamesreen-inner">
 
@@ -154,8 +153,7 @@ export default function PageGamesreen() {
 
             </div>
           </div>
-        </div>
-      </section>
+      </div>
     </>
   );
 };

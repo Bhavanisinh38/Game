@@ -1,5 +1,12 @@
+.gamesreen-container{
+    max-width: 1350px;
+    width: 100%;
+    margin: auto;
+    padding: 0 12px;
+}
+
 .gamesreen-main-bx{
-    padding: 15px;
+    padding: 0 12px;
 }
 
 .gamesreen-common-bx,
@@ -13,6 +20,7 @@
     position: relative;
     height: 230px;
     user-select: none;
+    pointer-events: none;
 }
 
 /* --- gamesreen mountains --- */
@@ -543,11 +551,13 @@
 .beting-btns-group{
     display: flex;
     flex-wrap: wrap;
+    margin-top: -5px;
+    margin-bottom: -3px;
 }
 
 .beting-btns-group .beting-btn{
     color: white;
-    padding: 3px 10px;
+    padding: 3px 3px;
     flex: 0 1 16.33%;
     width: 16.33%;
     text-align: center;
@@ -621,12 +631,19 @@
 }
 
 
-@media (max-width:768px) {
+/* @media (max-width:992px) {
+    .beting-btns-group .beting-btn{
+        flex: 0 1 16.33%;
+        width: 16.33%;
+    }
+} */
+
+/* @media (max-width:768px) {
     .beting-btns-group .beting-btn{
         flex: 0 1 20%;
         width: 20%;
     }
-}
+} */
 
 @media (max-width:576px) {
     .gamesreen-common-bx{
@@ -643,14 +660,19 @@
 /* --- Gamesreen Table --- */
 
 .gs-table-radius{
-    border-radius: 10px;   
-    overflow: hidden; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.gs-table-heading-bx{
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(-45deg, var(--color7), var(--color6));
 }
 
 .gs-table-heading-bx .gs-table-heading-item{
     font-size: 14px;
     padding: 5px 10px;
-    background-image: linear-gradient(-45deg, var(--color7), var(--color6));
 }
 
 .gs-table-heading-bx .gs-table-heading-item svg{
@@ -660,10 +682,29 @@
     top: -1px;
 }
 
+.gs-player-table-heading-bx .gs-table-heading-item{
+    font-size: 11px;
+    font-weight: 500;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.gs-player-table-heading-bx .gs-table-heading-item svg{
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: -1px;
+    margin-right: 3px;
+}
+
 .gs-table-responsive{
     height: calc(213.78px - 33.8px);
     overflow: auto;
     border-radius: 0;
+}
+
+.gs-table-responsive.gs-players-table-height{
+    height: calc(461px);
 }
 
 .gs-table-responsive .custom-table thead{
@@ -684,11 +725,17 @@
 .gs-table-responsive .custom-table thead tr th{
     font-size: 12px;
     width: auto;
-    padding: 5px 10px;
+    padding: 5px 5px;
     white-space: nowrap;
 }
 
 @media (max-width:992px) {
+    .gs-table-responsive.gs-players-table-height{
+        height: auto;
+    }
+}
+
+@media (max-width:768px) {
     .gs-table-responsive{
         height: auto;
     }

@@ -7,7 +7,7 @@ export default function PageGamehistory() {
 
   return (
     <>
-    <div className="gamesreen-common-bx gs-table-radius  p-0">
+    <div className="gamesreen-common-bx gs-table-radius p-0">
       <div className="gs-table-heading-bx">
         <div className="gs-table-heading-item">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
