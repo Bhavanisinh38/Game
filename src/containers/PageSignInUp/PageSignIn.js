@@ -33,7 +33,7 @@ export default function PageSignIn() {
                         </div>
 
                         <div className="site-info text-center">
-                            By continuing you agree to Crash Game <a href="/">Terms & Conditions</a> and <a href="/">Privacy Policy</a>.
+                            By continuing you agree to Crash Game <Link to="/terms">Terms & Conditions</Link> & <Link to="/privacy">Privacy Policy</Link>.
                         </div>
 
                     
