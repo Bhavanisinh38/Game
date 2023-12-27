@@ -114,6 +114,53 @@
     color: var(--color1);
     cursor: pointer;
 }
+
+.sip-wallet-btn{
+    position: relative;
+}
+
+.sip-wallet-btn .sip-wallet-notis{
+    white-space: nowrap;
+    pointer-events: none;
+    position: absolute;
+    top: calc(100% + 15px);
+    background-color: var(--color1-300);
+    border: 1px solid rgb(63, 59, 69);
+    padding: 2px 10px;
+    border-radius: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.sip-wallet-btn .sip-wallet-notis{
+    opacity: 1;
+    visibility: visible;
+}
+
+.sip-wallet-btn .sip-wallet-notis::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -8px) rotate(45deg);
+    width: 10px;
+    height: 10px;
+}
+
+.sip-wallet-btn .sip-wallet-notis.added-wn::after,
+.sip-wallet-btn .sip-wallet-notis.added-wn{
+    background-color: var(--color3);
+    border: 1px solid var(--color3);
+    color: white;
+}
+
+.sip-wallet-btn .sip-wallet-notis.less-wn::after,
+.sip-wallet-btn .sip-wallet-notis.less-wn{
+    background-color: var(--color4);
+    border: 1px solid var(--color4);
+    color: white;
+}
+
 /* --- Signinup Btn Bx End --- */
 
 
