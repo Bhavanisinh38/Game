@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
+// Images Common File
+import demo_img from '../../img/demo.png'
 
 export default function PageAbout() {
   return (
@@ -23,24 +25,54 @@ export default function PageAbout() {
       <section className="mb-5">
           <div className="container-lg lagle-container">
               <div className="lagle-heading">How to make deposit</div>
-              <div className="legal-content">
-                
-                    <div className="main-sub-lable">Step 1</div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
-                    <div className="main-sub-lable">Step 2</div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <div className="pt-3"></div>
 
-                    <div className="main-sub-lable">Step 3</div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <div className="row align-items-center py-2">
+                    <div className="col-md-6 order-2 order-md-1">
+                        <div className="common-text-layout">
+                            <div className="ctl-tag"><span className="ctl-t-num">1</span> Step</div>
+                            <div className="ctl-heading">Lorem Ipsum is simply</div>
+                            <p className="ctl-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+                    <div className="col-md-6 order-1 order-md-2">
+                        <div className="common-digital-layout">
+                            <img className="cdl-img" src={demo_img} alt="Stpe 1" />
+                        </div>
+                    </div>
+                </div>
 
-                    <div className="main-sub-lable">Step 4</div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <div className="row align-items-center py-2 mt-5 mt-md-3">
+                    <div className="col-md-6">
+                        <div className="common-digital-layout">
+                            <img className="cdl-img" src={demo_img} alt="Stpe 1" />
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="common-text-layout">
+                            <div className="ctl-tag"><span className="ctl-t-num">2</span>Step</div>
+                            <div className="ctl-heading">Lorem Ipsum is simply</div>
+                            <p className="ctl-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+                </div>
 
-                    <div className="main-sub-lable">Step 5</div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <div className="row align-items-center py-2 mt-5 mt-md-3">
+                    <div className="col-md-6 order-2 order-md-1">
+                        <div className="common-text-layout">
+                            <div className="ctl-tag"><span className="ctl-t-num">3</span> Step</div>
+                            <div className="ctl-heading">Lorem Ipsum is simply</div>
+                            <p className="ctl-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                    </div>
+                    <div className="col-md-6 order-1 order-md-2">
+                        <div className="common-digital-layout">
+                          <img className="cdl-img" src={demo_img} alt="Stpe 3" />
+                        </div>
+                    </div>
+                </div>
 
-              </div>
           </div>
       </section>
 
