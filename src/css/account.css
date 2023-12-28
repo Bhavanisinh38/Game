@@ -380,6 +380,10 @@
     margin-top: -5px;
 }
 
+.wallet-amount-bx .wab-data-bx .wdb-lable a{
+    color: currentColor;
+    text-decoration: underline;
+}
 
 .wallet-amount-btns{
     display: flex;

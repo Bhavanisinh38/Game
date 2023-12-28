@@ -18,6 +18,7 @@ export default function Footer() {
                             <NavLink to="/faqs" className="footer-link">FAQs</NavLink>
                             <NavLink to="/privacy" className="footer-link">Privacy</NavLink>
                             <NavLink to="/terms" className="footer-link">Terms</NavLink>
+                            <NavLink to="/how-to-make-deposit" className="footer-link">How to make deposit</NavLink>
                             <NavLink to="/contact" className="footer-link">Contact</NavLink>
                             <NavLink to="/sitemap" className="footer-link">Sitemap</NavLink>
                         </div>

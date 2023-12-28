@@ -28,6 +28,7 @@ import PageAbout from "../containers/PageLagle/PageAbout";
 import PageFaqs from "../containers/PageLagle/PageFaqs";
 import PagePrivacy from "../containers/PageLagle/PagePrivacy";
 import PageTerms from "../containers/PageLagle/PageTerms";
+import PageDeposit from "../containers/PageLagle/PageDeposit";
 
 // Contact Page
 import PageContact from "../containers/PageContact/PageContact";
@@ -37,6 +38,7 @@ import PageSitemap from "../containers/PageLagle/PageSitemap";
 
 // Footer section
 import FlashMessage from "../components/FlashMessage";
+import FlashMessagetwo from "../components/FlashMessagetwo";
 import Footer from "../components/Footer/Footer";
 
 
@@ -57,6 +59,7 @@ export const pages = [
   { path: "/faqs", component: PageFaqs },
   { path: "/privacy", component: PagePrivacy },
   { path: "/terms", component: PageTerms },
+  { path: "/how-to-make-deposit", component: PageDeposit },
 
   { path: "/contact", component: PageContact },
 
@@ -86,6 +89,7 @@ const MyRoutes = () => {
       </main>
 
       <FlashMessage />
+      <FlashMessagetwo />
       {!hidefooter && <Footer />}
     </>
   );

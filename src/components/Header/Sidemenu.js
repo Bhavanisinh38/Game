@@ -73,6 +73,7 @@ export default function Sidemenu() {
                         <li><NavLink to="/faqs" className="smb-link">FAQs</NavLink></li>
                         <li><NavLink to="/privacy" className="smb-link">Privacy</NavLink></li>
                         <li><NavLink to="/terms" className="smb-link">Terms</NavLink></li>
+                        <li><NavLink to="/how-to-make-deposit" className="smb-link">How to make deposit</NavLink></li>
                         <li><NavLink to="/contact" className="smb-link">Contact</NavLink></li>
                         <li><NavLink to="/sitemap" className="smb-link">Sitemap</NavLink></li>
                     </ul>

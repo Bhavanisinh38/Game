@@ -6,7 +6,7 @@ import * as Img from './Img';
 // Css File
 import '../css/flashmessage.css'
 
-function FlashMessage() {
+export default function FlashMessage() {
     const [isPopupVisible, setPopupVisible] = useState(false);
 
     useEffect(() => {
@@ -25,9 +25,9 @@ function FlashMessage() {
         };
     }, [isPopupVisible]);
 
-    const handlefmp = () => {
-        setPopupVisible(true);
-    };
+    // const handlefmp = () => {
+    //     setPopupVisible(true);
+    // };
 
     const handlefmpclose = () => {
         setPopupVisible(false);
@@ -35,7 +35,7 @@ function FlashMessage() {
 
     return (
         <>
-            <div className="cmp-btn" onClick={handlefmp}><i className="fa fa-commenting-o" aria-hidden="true"></i></div>
+            {/* <div className="cmp-btn" onClick={handlefmp}><i className="fa fa-commenting-o" aria-hidden="true"></i></div> */}
 
             <div className={`flash-message sf-msg ${isPopupVisible ? 'fmp-message' : ''}`}>
                 <div className="flash-message-inner">
@@ -67,5 +67,3 @@ function FlashMessage() {
         </>
     );
 }
-
-export default FlashMessage;

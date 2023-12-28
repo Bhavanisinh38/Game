@@ -1,4 +1,5 @@
 import React, { useState }  from 'react';
+import {Link} from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 // Images Common File
@@ -286,6 +287,11 @@ export default function PageWallet() {
                     </div>
                 </div>
 
+                <div className="signinup-group-nots">
+                    <span>Please note:</span>
+                    <p>A minimum of <span>₹300</span> is required to add money to the wallet & amount will be transferred to your wallet account after admin approval <Link to="/how-to-make-deposit">How to make deposit</Link>.</p>
+                </div>
+
                 <div className='amib-loadmoney-bx'>
 
                     <div className={`amib-i-tab ${amibSection === 'QRCode' ? 'active' : ''}`} id="QRCode">
@@ -329,7 +335,15 @@ export default function PageWallet() {
 
                             <div className="row mx-md-0">
 
-                                <div className="col-12">
+                                <div className="col-sm-6">
+                                    <div className="signinup-group sgli">
+                                        <div className="group__label">Amount</div>
+                                        <input type="number" placeholder="Enter amount"/>
+                                        <span className="group_left_icon" style={{fontSize:"18px",width:"40px"}}>₹</span>
+                                    </div>
+                                </div>
+
+                                <div className="col-sm-6">
                                     <div className="signinup-group">
                                         <div className="group__label">Transaction ID</div>
                                         <input type="text" placeholder="Enter transaction id"/>
