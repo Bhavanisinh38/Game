@@ -10,6 +10,7 @@ import capture from '../../img/icons/capture.png';
 
 // Design File
 import Commonlayout from "./Commonlayout";
+import EmptyBox from '../../components/EmptyBox';
 
 
 export default function PageWallet() {
@@ -109,6 +110,8 @@ export default function PageWallet() {
                     </svg>
                     All transitions history
                 </div>
+
+                <EmptyBox esh="There are no transitions history" />
 
                 <div className="custom-table-responsive">
                     <table className="custom-table">

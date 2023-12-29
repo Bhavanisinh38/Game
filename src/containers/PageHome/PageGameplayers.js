@@ -1,7 +1,10 @@
 import React from 'react';
 
 // Images Common File
-import * as Img from '../../components/Img';
+// import * as Img from '../../components/Img';
+
+// Design Files
+import EmptyBox from '../../components/EmptyBox';
 
 export default function PageGameplayers() {
 
@@ -77,10 +80,7 @@ export default function PageGameplayers() {
             
               <tr className="win-game">
                   <td colspan="4">
-                    <div className="empty-div-bx p-0" style={{minHeight:"100%"}}>
-                        <img className="empty-img" src={Img.empty} alt="Data is not available" />
-                        <div className="empty-sub-heading mt-2">No bets placed yete</div>
-                    </div>
+                    <EmptyBox className="p-0" style={{minHeight:"100%"}} eh="" esh="No bets placed yete" />
                   </td>
               </tr>
 

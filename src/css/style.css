@@ -481,7 +481,7 @@ body{
 .common-text-layout .ctl-tag{
     display: flex;
     align-items: center;
-    color: #8036e0;
+    color: var(--color6);
     font-weight: 500;
     font-size: 16px;
     margin-bottom: 10px;
@@ -497,8 +497,9 @@ body{
     font-size: 12px;
     border-radius: 50%;
     color: white;
-    background-color: #8036e0;
+    background-color: var(--color6);
     margin-right: 5px;
+    line-height: 20px;
 }
 
 .common-text-layout .ctl-heading{
@@ -532,7 +533,7 @@ body{
     border: none;
     outline: none;
     cursor: pointer;
-    background-color: #8036e0;
+    background-color: var(--color6);
     transition: all 0.3s ease-in-out;
 }
 
@@ -837,6 +838,12 @@ body{
 .legal-ul li a:hover,
 .legal-content p a:hover {
     color: #d2ae6d;
+}
+
+@media screen and (max-width:576px) {
+    .lagle-heading{
+        font-size: 28px;
+    }
 }
 /* --- Lagal pages css end --- */
 

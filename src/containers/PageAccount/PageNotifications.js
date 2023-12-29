@@ -2,10 +2,11 @@ import React from 'react';
 import { Helmet } from "react-helmet-async";
 
 // Images Common File
-import * as Img from '../../components/Img';
+// import * as Img from '../../components/Img';
 
 // Design File
 import Commonlayout from "./Commonlayout";
+import EmptyBox from '../../components/EmptyBox';
 
 
 export default function PageNotifications() {
@@ -27,11 +28,7 @@ export default function PageNotifications() {
                 Notifications
             </div>
 
-            <div className="empty-div-bx">
-                <img className="empty-img" src={Img.empty} alt="Data is not available" />
-                <div className="empty-heading">Not Found</div>
-                <div className="empty-sub-heading">There are no new notifications</div>
-            </div>
+            <EmptyBox esh="There are no new notifications" />
 
             <div className="amib-item mt-3 mt-lg-0">
 
