@@ -19,5 +19,5 @@ EmptyBox.defaultProps = {
     ei: Img.empty,
     ei_alt: "Data is not available",
     eh: "Not Found",
-    esh: "There are no new notifications",
+    esh: "Data is not available",
 }
