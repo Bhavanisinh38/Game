@@ -623,7 +623,6 @@
     }
 
     .account-left{
-        top: 110px;
         padding: 0;
         flex: initial;
         width: 100%;
@@ -684,6 +683,10 @@
 }
 
 @media screen and (max-width:576px) {
+    .account-left{
+        top: 110px;
+    }
+    
     .amib-item{
         padding: 0px;
         border-radius: 0px;
