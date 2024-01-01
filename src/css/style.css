@@ -773,6 +773,46 @@ body{
 /* --- Empty Box Css End--- */
 
 
+/* --- Bootstrep Modal Css Overaid --- */
+
+.modal{
+    backdrop-filter: blur(5px);
+}
+
+.modal.fade.zoom .modal-dialog{
+    transform: scale(0.9);
+}
+
+.modal.zoom.show .modal-dialog {
+    transform: none;
+}
+
+.modal-content.custom-content{
+    background-color: var(--color1);
+    border-radius: 16px;
+}
+
+.custom-modal-header{
+    position: sticky;
+    padding: 20px 15px 15px;
+}
+
+.custom-modal-header .cmh-lable{
+    font-size: 20px;
+    color: #f2f1f3;
+    font-weight: 400;
+    text-align: center;
+}
+
+.custom-modal-header .cmh-sub-lable{
+    font-size: 16px;
+    color: #f2f1f3;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
 /* --- Lagal pages css start --- */
 .lagle-heading{
     color: white;

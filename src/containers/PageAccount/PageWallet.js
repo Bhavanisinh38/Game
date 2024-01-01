@@ -288,11 +288,23 @@ export default function PageWallet() {
                         </svg>
                         Bank Detail
                     </div>
+                    <div className={`ait-link ${amibSection === 'ownerupi' ? 'active' : ''}`} onClick={() => handleAmibSection('ownerupi')}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+                        </svg>
+                        UPI Id
+                    </div>
                 </div>
 
                 <div className="signinup-group-nots">
                     <span>Please note:</span>
-                    <p>A minimum of <span>₹300</span> is required to add money to the wallet & amount will be transferred to your wallet account after admin approval <Link to="/how-to-make-deposit">How to make deposit</Link>.</p>
+                    <p>A minimum of <span>₹300</span> is required to add money to the wallet & amount will be transferred to your wallet account after admin approval.</p>
+                    <Link to="/how-to-make-deposit">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                        </svg>
+                        How to make deposit
+                    </Link>
                 </div>
 
                 <div className='amib-loadmoney-bx'>
@@ -305,7 +317,7 @@ export default function PageWallet() {
                     </div>
 
                     <div className={`amib-i-tab ${amibSection === 'bankdetail' ? 'active' : ''}`} id="bankdetail">
-                        <div className="amib-i-sublable">Scan the QR code and submit the transaction ID you got after making the payment</div>
+                        <div className="amib-i-sublable">Submit the transaction ID you got after making the payment</div>
                         <div className="loadmoney-data-bx">
 
                             <div className="row mx-0">
@@ -333,8 +345,27 @@ export default function PageWallet() {
                         </div>
                     </div>
 
+                    <div className={`amib-i-tab ${amibSection === 'ownerupi' ? 'active' : ''}`} id="ownerupi">
+                        <div className="amib-i-sublable">Submit the transaction ID you got after making the payment</div>
+                        <div className="loadmoney-data-bx py-2">
+
+                            <div className="ldb-data-copy" title="Copy UPI ID">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+                                </svg>
+                            </div>
+
+                            <div className="row mx-0">
+                                <div className="col-md-12 col-sm-6 ldb-data-item">UPI ID
+                                    <span>pmcommu@icici</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
                     <div className="amib-i-tab active mt-md-0 mt-4">
-                        <form action="" className="ps-md-4">
+                        <form action="" className="addmoneyform ps-md-4">
 
                             <div className="row mx-md-0">
 

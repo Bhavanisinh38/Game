@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 
 // Images Common File
 import * as Img from '../Img';
+import rupeeicon from '../../img/icons/rupee-icon.png'
 
 // Css File
 import '../../css/header.css'
@@ -32,12 +33,12 @@ export default function Header() {
 
             <div className="signinup-btn-bx">
 
-              {/* <Link to="/wallet" className='sip-wallet-btn'>
+              <Link style={{padding: "5px 6px"}} to="/wallet" className='sip-wallet-btn' title="Add money">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
-                <span>Add Money</span>
-              </Link> */}
+                <span> <img src={rupeeicon} alt="Rupee Icon" /></span>
+              </Link>
 
               <Link to="/wallet" className='sip-wallet-btn'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">

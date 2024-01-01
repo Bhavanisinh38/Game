@@ -81,7 +81,7 @@
     display: flex;
     justify-content: flex-end;
     padding-left: 5px;
-    padding-right: 5px;
+    /* padding-right: 5px; */
 }
 
 .sip-wallet-btn,
@@ -96,6 +96,7 @@
     background-color: var(--color1-300);
     border: 1px solid rgb(63, 59, 69);
     transition: 0.3s ease-in-out;
+    white-space: nowrap;
 }
 
 .sip-wallet-btn svg,
@@ -106,6 +107,15 @@
     margin-right: 5px;
     object-fit: cover;
     object-position: center;
+}
+
+.sip-wallet-btn img{
+    width: 20px;
+    height: 20px;
+    object-position: center;
+    object-fit: contain;
+    position: relative;
+    top: -0.8px;
 }
 
 .sip-wallet-btn:hover,
@@ -164,10 +174,31 @@
 /* --- Signinup Btn Bx End --- */
 
 
+@media (max-width:576px) {
+    .main-header{
+        padding-top: 60px;
+    }
+
+    .signinup-btn-bx{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        padding: 8px;
+        border-bottom: 1px solid rgb(255 255 255 / 10%);
+    }
+}
+
 @media (max-width:450px) {
+
+    .signinup-btn-bx{
+        align-items: center;
+    }
+
     .signinup-btn-bx .sip-btn{
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
+        padding: 0;
     } 
 
     .signinup-btn-bx .sip-btn span{
@@ -177,10 +208,4 @@
     .signinup-btn-bx .sip-btn svg{
         margin: 0;
     } 
-}
-
-@media (max-width:370px) {
-    .signinup-btn-bx .sip-btn{
-        display: none;
-    }
 }

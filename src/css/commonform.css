@@ -245,6 +245,29 @@ input[type=number] {
     text-decoration: underline;
 }
 
+.signinup-group-nots a{
+    display: inline-block;
+    color: #bfbac4;
+    font-weight: 500;
+    border-radius: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: underline;
+}
+
+.signinup-group-nots a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.signinup-group-nots a svg{
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
 /* --- clear-input-icon --- */
 .clear-input-icon{
     position: absolute;
