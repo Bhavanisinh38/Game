@@ -1,17 +1,39 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 120 version
+*/
+
 .main-header{
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     padding: 10px;
     background-color: var(--color5);
     z-index: 1024;
-    box-shadow: 0 0 45px -15px black;
+    -webkit-box-shadow: 0 0 45px -15px black;
+       -moz-box-shadow: 0 0 45px -15px black;
+            box-shadow: 0 0 45px -15px black;
 }
 
 .main-header .mh-inner{
     height: 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 
@@ -25,8 +47,10 @@
 .main-header .mh-inner .mh-left .logo-links img{
     width: 100%;
     height: 100%;
-    object-position: center;
-    object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 /* --- Logo css end --- */
 
@@ -35,11 +59,31 @@
 .menu-icon-bx {
     width: 25px;
     height: 24px;
-    flex: 0 0 25px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25px;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 25px;
+            flex: 0 0 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 0px;
     cursor: pointer;
     margin-left: 5px;
@@ -49,9 +93,14 @@
     display: block;
     width: 100%;
     height: 3px;
-    border-radius: 100px;
+    -webkit-border-radius: 100px;
+       -moz-border-radius: 100px;
+            border-radius: 100px;
     opacity: 0.7;
     background-color: white;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
@@ -78,23 +127,48 @@
 
 /* --- Signinup Btn Bx Start --- */
 .signinup-btn-bx{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+       -moz-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     padding-left: 5px;
     /* padding-right: 5px; */
 }
 
 .sip-wallet-btn,
 .signinup-btn-bx .sip-btn{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 5px 12px;
-    border-radius: 50px;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
     font-size: 14px;
     margin: 0 3px;
     background-color: var(--color1-300);
     border: 1px solid rgb(63, 59, 69);
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     white-space: nowrap;
 }
@@ -105,15 +179,19 @@
     height: 20px;
     position: relative;
     margin-right: 5px;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
 }
 
 .sip-wallet-btn img{
     width: 20px;
     height: 20px;
-    object-position: center;
-    object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: contain;
+       object-fit: contain;
     position: relative;
     top: -0.8px;
 }
@@ -192,7 +270,11 @@
 @media (max-width:450px) {
 
     .signinup-btn-bx{
-        align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .signinup-btn-bx .sip-btn{

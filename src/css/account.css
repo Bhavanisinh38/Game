@@ -1,4 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 120 version
+*/
+
 .account-main-section{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     max-width: 1920px;
@@ -8,16 +19,25 @@
 
 /* --- Account Left --- */
 .account-left{
+    position: -webkit-sticky;
     position: sticky;
     top: 60px;
     left: 0;
+    height: -webkit-calc(100vh - 60px);
+    height: -moz-calc(100vh - 60px);
     height: calc(100vh - 60px);
     overflow: hidden;
     overflow-y: auto;
-    flex: 0 1 300px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 300px;
+       -moz-box-flex: 0;
+        -ms-flex: 0 1 300px;
+            flex: 0 1 300px;
     width: 300px;
     background-color: var(--color5);
-    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
+       -moz-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
+            box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
     padding-bottom: 50px;
 }
 
@@ -25,12 +45,21 @@
 /* --- Profile left pic --- */
 .account-left-pic{
     position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 15px;
     white-space: nowrap;
     width: 100%;
     background: var(--color5);
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 2;
@@ -41,8 +70,14 @@
     position: absolute;
     left: 50%;
     bottom: 0;
+    width: -webkit-calc(100% - 20px);
+    width: -moz-calc(100% - 20px);
     width: calc(100% - 20px);
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+         -o-transform: translateX(-50%);
+            transform: translateX(-50%);
     height: 1px;
     background-color:rgb(63, 59, 69);
 }
@@ -50,19 +85,29 @@
 .account-left-pic .alp-img{
     width: 45px;
     height: 45px;
-    flex: 0 0 45px;
-    border-radius: 50%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 45px;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 45px;
+            flex: 0 0 45px;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
     margin-right: 8px;
 }
 
 .account-left-pic svg{
     width: 45px;
     height: 45px;
-    object-position: center;
-    object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: contain;
+       object-fit: contain;
     padding: 10px;
     margin-right: 10px;
-    border-radius: 50px;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
     background: var(--color1-300);
     border: 1px solid rgb(63, 59, 69);
 }
@@ -73,7 +118,8 @@
     color: #f2f1f3;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
 }
 
 .account-left-pic .alp-data .alp-email-lable{
@@ -81,7 +127,8 @@
     font-size: 12px;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
 }
 
 /* --- Side menu --- */
@@ -90,14 +137,25 @@
     background-color: var(--color1);
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+       -moz-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+         -o-transform: translateY(20px);
+            transform: translateY(20px);
+    -webkit-transition: 0.3s all 0.55s ease;
+    -o-transition: 0.3s all 0.55s ease;
+    -moz-transition: 0.3s all 0.55s ease;
     transition: 0.3s all 0.55s ease;
 }
 
 .side-menu-bx.active .account-left-pic{
     opacity: 1;
     visibility: visible;
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+       -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+         -o-transform: translateY(0px);
+            transform: translateY(0px);
 }
 /* --- Side Menu --- */
 
@@ -119,7 +177,12 @@
     color: #f2f1f3;
     text-transform: capitalize;
     cursor: pointer;
-    border-radius: 8px 0 0 8px;
+    -webkit-border-radius: 8px 0 0 8px;
+       -moz-border-radius: 8px 0 0 8px;
+            border-radius: 8px 0 0 8px;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -128,8 +191,10 @@
     top: -1px;
     width: 20px;
     height: 20px;
-    object-position: center;
-    object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: contain;
+       object-fit: contain;
     margin-right: 10px;
 }
 
@@ -144,13 +209,27 @@
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
     width: 4px;
+    height: -webkit-calc(100% - 10px);
+    height: -moz-calc(100% - 10px);
     height: calc(100% - 10px);
     background-color: var(--color2);
+    background-image: -webkit-linear-gradient(135deg, var(--color7), var(--color6));
+    background-image: -moz-linear-gradient(135deg, var(--color7), var(--color6));
+    background-image: -o-linear-gradient(135deg, var(--color7), var(--color6));
     background-image: linear-gradient(-45deg, var(--color7), var(--color6));
-    border-radius: 50px 0 0 50px;
+    -webkit-border-radius: 50px 0 0 50px;
+       -moz-border-radius: 50px 0 0 50px;
+            border-radius: 50px 0 0 50px;
     opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -165,21 +244,44 @@
     z-index: 1;
     width: 17px;
     height: 17px;
-    border-radius: 50px;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
     background-color: var(--color2);
+    background-image: -webkit-linear-gradient(135deg, var(--color7), var(--color6));
+    background-image: -moz-linear-gradient(135deg, var(--color7), var(--color6));
+    background-image: -o-linear-gradient(135deg, var(--color7), var(--color6));
     background-image: linear-gradient(-45deg, var(--color7), var(--color6));
     display: block;
     color: white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-weight: 400;
     font-size: 11px;
 }
 
 /* --- Account Right --- */
 .account-right{
-    flex: 1 0 calc(100% - 300px);
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 -webkit-calc(100% - 300px);
+       -moz-box-flex: 1;
+        -ms-flex: 1 0 calc(100% - 300px);
+            flex: 1 0 calc(100% - 300px);
+    width: -webkit-calc(100% - 300px);
+    width: -moz-calc(100% - 300px);
     width: calc(100% - 300px);
     padding: 0 15px;
 }
@@ -225,9 +327,21 @@
 
 .amib-i-cancel{
     position: relative;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 4px 10px 2px;
     font-size: 14px;
     color: #f2f1f3;
@@ -236,8 +350,13 @@
     margin-right: 5px;
     border: 1px solid rgb(255 255 255 / 30%);
     background-color: var(--color1);
-    border-radius: 50px;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
     overflow: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     float: right;
 }
@@ -252,8 +371,10 @@
     top: -2px;
     width: 24px;
     height: 24px;
-    object-position: center;
-    object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: contain;
+       object-fit: contain;
     margin-right: 5px;
 }
 
@@ -264,7 +385,9 @@
 
 .amib-item{
     padding: 20px;
-    border-radius: 16px;
+    -webkit-border-radius: 16px;
+       -moz-border-radius: 16px;
+            border-radius: 16px;
     background-color: var(--color5);
 }
 
@@ -302,9 +425,21 @@
 
 .amib-inner-tabbx .ait-link{
     position: relative;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 8px 12px 7px;
     font-size: 14px;
     color: #f2f1f3;
@@ -313,8 +448,13 @@
     margin-right: 5px;
     border: 1px solid rgb(255 255 255 / 30%);
     background-color: var(--color1);
-    border-radius: 50px;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
     overflow: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
@@ -323,6 +463,9 @@
 }
 
 .amib-inner-tabbx .ait-link.active{
+    background-image: -webkit-linear-gradient(135deg, var(--color7), var(--color6));
+    background-image: -moz-linear-gradient(135deg, var(--color7), var(--color6));
+    background-image: -o-linear-gradient(135deg, var(--color7), var(--color6));
     background-image: linear-gradient(-45deg, var(--color7), var(--color6));
     border-color: transparent;
     color: white;
@@ -337,8 +480,10 @@
     top: -1px;
     width: 18px;
     height: 18px;
-    object-position: center;
-    object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: contain;
+       object-fit: contain;
     margin-right: 5px;
 }
 /* --- amib inner tabbx end --- */
@@ -347,17 +492,36 @@
 /* --- Wallet page css start --- */
 .wallet-amount-bx{
     position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 15px 20px;
-    border-radius: 16px;
+    -webkit-border-radius: 16px;
+       -moz-border-radius: 16px;
+            border-radius: 16px;
+    background-image: -webkit-linear-gradient(45deg, rgb(255 225 208), rgb(255 205 211));
+    background-image: -moz-linear-gradient(45deg, rgb(255 225 208), rgb(255 205 211));
+    background-image: -o-linear-gradient(45deg, rgb(255 225 208), rgb(255 205 211));
     background-image: linear-gradient(45deg, rgb(255 225 208), rgb(255 205 211));
 }
 
 .wallet-amount-bx .walletgrapics{
     position: absolute;
     right: 0;
+    bottom: -webkit-calc(100% - 60px);
+    bottom: -moz-calc(100% - 60px);
     bottom: calc(100% - 60px);
     width: 200px;
     z-index: 0;
@@ -391,9 +555,14 @@
     font-weight: 500;
     background-color: var(--color6-100);
     padding: 4px 15px 5px;
-    border-radius: 50px;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
     margin-top: 10px;
     font-size: 14px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     text-decoration: underline;
 }
@@ -412,17 +581,45 @@
 
 
 .wallet-amount-btns{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .wallet-amount-bx .add-money-btn{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 8px 15px;
-    border-radius: 50px;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     font-weight: 500;
     font-size: 14px;
@@ -431,10 +628,21 @@
     cursor: pointer;
     color: white;
     border: none;
+    background-image: -webkit-linear-gradient(135deg, var(--color7), var(--color6));
+    background-image: -moz-linear-gradient(135deg, var(--color7), var(--color6));
+    background-image: -o-linear-gradient(135deg, var(--color7), var(--color6));
     background-image: linear-gradient(-45deg, var(--color7), var(--color6));
-    background-size: 200% 200%;
+    -webkit-background-size: 200% 200%;
+       -moz-background-size: 200% 200%;
+         -o-background-size: 200% 200%;
+            background-size: 200% 200%;
     background-position: center left;
+    -webkit-transition: background-position 0.3s ease-in-out, -webkit-transform 0.3s ease;
+    transition: background-position 0.3s ease-in-out, -webkit-transform 0.3s ease;
+    -o-transition: background-position 0.3s ease-in-out, -o-transform 0.3s ease;
+    -moz-transition: background-position 0.3s ease-in-out, transform 0.3s ease, -moz-transform 0.3s ease;
     transition: background-position 0.3s ease-in-out, transform 0.3s ease;
+    transition: background-position 0.3s ease-in-out, transform 0.3s ease, -webkit-transform 0.3s ease, -moz-transform 0.3s ease, -o-transform 0.3s ease;
     letter-spacing: 0.5px;
     margin-top: 40px;
     margin: 0 5px;
@@ -442,6 +650,9 @@
 }
 
 .wallet-amount-bx .add-money-btn.withdrawal-btn{
+    background-image: -webkit-linear-gradient(135deg, var(--color3), var(--color3-700));
+    background-image: -moz-linear-gradient(135deg, var(--color3), var(--color3-700));
+    background-image: -o-linear-gradient(135deg, var(--color3), var(--color3-700));
     background-image: linear-gradient(-45deg, var(--color3), var(--color3-700));
 }
 
@@ -457,33 +668,57 @@
 }
 
 .wallet-amount-bx .add-money-btn:active{
-    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+       -moz-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+         -o-transform: scale(0.95);
+            transform: scale(0.95);
 }
 
 .wallet-amount-bx .add-money-btn svg{
     width: 26px;
     height: 26px;
-    object-fit: contain;
-    object-position: center;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
     margin-right: 5px;
 }
 
 .amib-loadmoney-bx{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .amib-loadmoney-bx > *{
-    flex: 0 1 280px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 280px;
+       -moz-box-flex: 0;
+        -ms-flex: 0 1 280px;
+            flex: 0 1 280px;
 }
 
 .amib-loadmoney-bx > *:last-child{
-    flex: 0 1 calc(100% - 280px);
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 -webkit-calc(100% - 280px);
+       -moz-box-flex: 0;
+        -ms-flex: 0 1 calc(100% - 280px);
+            flex: 0 1 calc(100% - 280px);
 }
 
 .loadmoney-data-bx{
     padding: 15px;
-    border-radius: 15px;
+    -webkit-border-radius: 15px;
+       -moz-border-radius: 15px;
+            border-radius: 15px;
     background-color: var(--color1);
     margin-top: 10px;
     overflow: hidden;
@@ -493,16 +728,33 @@
 .loadmoney-data-bx .ldb-data-copy{
     width: 45px;
     height: 45px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     right: 0;
     top: 0;
     padding: 0 0 10px 10px;
     background: var(--color2-500);
-    border-radius: 0 0 0 50px;
+    -webkit-border-radius: 0 0 0 50px;
+       -moz-border-radius: 0 0 0 50px;
+            border-radius: 0 0 0 50px;
     cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
@@ -536,6 +788,7 @@
 }
 
 .addmoneyform{
+    position: -webkit-sticky;
     position: sticky;
     top: 80px;
 }
@@ -561,6 +814,10 @@
 
 .nlb-item{
     position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 15px 0;
     border-bottom: 1px solid rgb(63, 59, 69);
@@ -574,8 +831,13 @@
     top: 17px;
     width: 8px;
     height: 8px;
-    border-radius: 50%;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
     background-color: var(--color2);
+    background-image: -webkit-linear-gradient(135deg, var(--color7), var(--color6));
+    background-image: -moz-linear-gradient(135deg, var(--color7), var(--color6));
+    background-image: -o-linear-gradient(135deg, var(--color7), var(--color6));
     background-image: linear-gradient(-45deg, var(--color7), var(--color6));
 }
 
@@ -587,10 +849,19 @@
     width: 40px;
     height: 40px;
     padding: 10px;
-    border-radius: 50%;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: var(--color2-200);
     margin-right: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
@@ -619,12 +890,22 @@
 
 @media screen and (max-width:992px) {
     .account-main-section{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .account-left{
         padding: 0;
-        flex: initial;
+        -webkit-box-flex: initial;
+        -webkit-flex: initial;
+           -moz-box-flex: initial;
+            -ms-flex: initial;
+                flex: initial;
         width: 100%;
         max-width: 100%;
         height: auto;
@@ -642,43 +923,70 @@
         display: block;
         white-space: nowrap;
         overflow-x: scroll;
+        -webkit-transition: overflow-x 0.3s ease-in-out;
+        -o-transition: overflow-x 0.3s ease-in-out;
+        -moz-transition: overflow-x 0.3s ease-in-out;
         transition: overflow-x 0.3s ease-in-out;
     }
 
     .account-menu-bx .amb-link{
         white-space: nowrap;
         margin: 0;
-        border-radius: 8px 8px 0 0;
+        -webkit-border-radius: 8px 8px 0 0;
+           -moz-border-radius: 8px 8px 0 0;
+                border-radius: 8px 8px 0 0;
         margin: 0 3px;
         display: inline-block;
     }
 
     .account-menu-bx .amb-link::after{
+        width: -webkit-calc(100% - 10px);
+        width: -moz-calc(100% - 10px);
         width: calc(100% - 10px);
         height: 4px;
         right: inherit;
         top: inherit;
         left: 50%;
         bottom: 0;
-        transform: translateX(-50%);
-        border-radius: 50px 50px 0 0;
+        -webkit-transform: translateX(-50%);
+           -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+             -o-transform: translateX(-50%);
+                transform: translateX(-50%);
+        -webkit-border-radius: 50px 50px 0 0;
+           -moz-border-radius: 50px 50px 0 0;
+                border-radius: 50px 50px 0 0;
     }
 
     .account-right{
         width: 100%;
-        flex: auto;
+        -webkit-box-flex: 1;
+        -webkit-flex: auto;
+           -moz-box-flex: 1;
+            -ms-flex: auto;
+                flex: auto;
     }
 
 }
 
 @media screen and (max-width:768px) {
     .amib-loadmoney-bx{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     
     .amib-loadmoney-bx > *{
         width: 100%;
-        flex: 0 1 100%;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 100%;
+           -moz-box-flex: 0;
+            -ms-flex: 0 1 100%;
+                flex: 0 1 100%;
     }
 }
 
@@ -689,14 +997,30 @@
     
     .amib-item{
         padding: 0px;
-        border-radius: 0px;
+        -webkit-border-radius: 0px;
+           -moz-border-radius: 0px;
+                border-radius: 0px;
         background-color: transparent;
     }
 
     .wallet-amount-bx{
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: start;
+        -webkit-align-items: start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: start;
         padding: 15px 10px;
     }
 
@@ -706,7 +1030,11 @@
 
     .wallet-amount-btns{
         width: 100%;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+           -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .wallet-amount-bx .add-money-btn{

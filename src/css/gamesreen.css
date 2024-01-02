@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 120 version
+*/
+
 .gamesreen-container{
     max-width: 1350px;
     width: 100%;
@@ -11,7 +18,9 @@
 
 .gamesreen-common-bx,
 .gamesreen-bx{
-    border-radius: 15px;
+    -webkit-border-radius: 15px;
+       -moz-border-radius: 15px;
+            border-radius: 15px;
     padding: 20px;
     background-color: var(--color5);
 }
@@ -19,7 +28,10 @@
 .gamesreen-bx .gamesreen-inner{
     position: relative;
     height: 230px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     pointer-events: none;
 }
 
@@ -31,6 +43,9 @@
     width: 100%;
     height: 100%;
     opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
@@ -44,10 +59,17 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-size: contain;
+    -webkit-background-size: contain;
+       -moz-background-size: contain;
+         -o-background-size: contain;
+            background-size: contain;
     background-repeat: repeat-x;
     background-position: center;
-    filter: brightness(0.5);
+    -webkit-filter: brightness(0.5);
+            filter: brightness(0.5);
+    -webkit-transition: background-position .3s ease-in-out;
+    -o-transition: background-position .3s ease-in-out;
+    -moz-transition: background-position .3s ease-in-out;
     transition: background-position .3s ease-in-out;
     /* animation: mountain-move 60s paused linear infinite; */
 }
@@ -81,6 +103,18 @@
     background-image: url("../img/aitplane/mountain-(5).svg");
 }
   
+@-webkit-keyframes mountain-move{
+    to{background-position-x: -500em;}
+}
+  
+@-moz-keyframes mountain-move{
+    to{background-position-x: -500em;}
+}
+  
+@-o-keyframes mountain-move{
+    to{background-position-x: -500em;}
+}
+  
 @keyframes mountain-move{
     to{background-position-x: -500em;}
 }
@@ -88,7 +122,13 @@
 /* --- gamesreen Dots --- */
 .dots{
     position: absolute;   
-    background-size: contain;
+    -webkit-background-size: contain;   
+       -moz-background-size: contain;   
+         -o-background-size: contain;   
+            background-size: contain;
+    -webkit-transition: background-position .3s ease-in-out;
+    -o-transition: background-position .3s ease-in-out;
+    -moz-transition: background-position .3s ease-in-out;
     transition: background-position .3s ease-in-out;
 }
 
@@ -111,8 +151,35 @@
 }
 
 
+@-webkit-keyframes dots-move-x {
+    to{background-position-x: -500em;}
+}
+
+
+@-moz-keyframes dots-move-x {
+    to{background-position-x: -500em;}
+}
+
+
+@-o-keyframes dots-move-x {
+    to{background-position-x: -500em;}
+}
+
+
 @keyframes dots-move-x {
     to{background-position-x: -500em;}
+}
+
+@-webkit-keyframes dots-move-y {
+    to{background-position-y: 500em;}
+}
+
+@-moz-keyframes dots-move-y {
+    to{background-position-y: 500em;}
+}
+
+@-o-keyframes dots-move-y {
+    to{background-position-y: 500em;}
 }
 
 @keyframes dots-move-y {
@@ -127,6 +194,9 @@
     bottom: 0;
     width: 10px;
     height: 15px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     /* animation: airplane-move 5s linear paused forwards; */
     z-index: 1;
@@ -140,7 +210,9 @@
     width: 10px;
     height: 10px;
     background-color: var(--color6);
-    border-radius: 50%;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
     z-index: -1;
     display: none;
 }
@@ -155,9 +227,38 @@
     display: none;
 }
 
-@keyframes airplane-move {
+@-webkit-keyframes airplane-move {
+    to{
+        width: -webkit-calc(100% - 50px);
+        width: calc(100% - 50px);
+        height: -webkit-calc(100% - 25px);
+        height: calc(100% - 25px);
+    }
+}
+
+@-moz-keyframes airplane-move {
+    to{
+        width: -moz-calc(100% - 50px);
+        width: calc(100% - 50px);
+        height: -moz-calc(100% - 25px);
+        height: calc(100% - 25px);
+    }
+}
+
+@-o-keyframes airplane-move {
     to{
         width: calc(100% - 50px);
+        height: calc(100% - 25px);
+    }
+}
+
+@keyframes airplane-move {
+    to{
+        width: -webkit-calc(100% - 50px);
+        width: -moz-calc(100% - 50px);
+        width: calc(100% - 50px);
+        height: -webkit-calc(100% - 25px);
+        height: -moz-calc(100% - 25px);
         height: calc(100% - 25px);
     }
 }
@@ -169,15 +270,37 @@
     right: -30px;
     top: -20px;
     background-position: left center;
-    background-size: cover;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
     background-repeat: no-repeat;
     display: none;
 } 
 
 .gi-img-item.gi-airplane{
-    transform: rotate(-25deg);
+    -webkit-transform: rotate(-25deg);
+       -moz-transform: rotate(-25deg);
+        -ms-transform: rotate(-25deg);
+         -o-transform: rotate(-25deg);
+            transform: rotate(-25deg);
     background-image: url("../img/aitplane/airplane.png");
-    animation: steps-sprite steps(47, start) 3s infinite;
+    -webkit-animation: steps-sprite steps(47, start) 3s infinite;
+       -moz-animation: steps-sprite steps(47, start) 3s infinite;
+         -o-animation: steps-sprite steps(47, start) 3s infinite;
+            animation: steps-sprite steps(47, start) 3s infinite;
+}
+
+@-webkit-keyframes steps-sprite{
+    to{background-position-x:100%}
+}
+
+@-moz-keyframes steps-sprite{
+    to{background-position-x:100%}
+}
+
+@-o-keyframes steps-sprite{
+    to{background-position-x:100%}
 }
 
 @keyframes steps-sprite{
@@ -190,8 +313,23 @@
     right: -40px;
     top: -30px;
     background-image: url("../img/aitplane/aitplane-crash.png");
-    animation:steps-crash-sprite steps(24, start) 2s 1 forwards;
+    -webkit-animation:steps-crash-sprite steps(24, start) 2s 1 forwards;
+       -moz-animation:steps-crash-sprite steps(24, start) 2s 1 forwards;
+         -o-animation:steps-crash-sprite steps(24, start) 2s 1 forwards;
+            animation:steps-crash-sprite steps(24, start) 2s 1 forwards;
     display: none;
+}
+
+@-webkit-keyframes steps-crash-sprite{
+    to{background-position-x:100%}
+}
+
+@-moz-keyframes steps-crash-sprite{
+    to{background-position-x:100%}
+}
+
+@-o-keyframes steps-crash-sprite{
+    to{background-position-x:100%}
 }
 
 @keyframes steps-crash-sprite{
@@ -212,11 +350,26 @@
     right: 0;
     width: 150px;
     height: 150px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     opacity: 1;
     visibility: visible;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
     overflow: hidden;
     z-index: 2;
@@ -235,40 +388,96 @@
     bottom: 25px;
     right: -75px;
     width: 100%;
-    animation: circle-bounce 1s .7s linear infinite;
+    -webkit-animation: circle-bounce 1s .7s linear infinite;
+       -moz-animation: circle-bounce 1s .7s linear infinite;
+         -o-animation: circle-bounce 1s .7s linear infinite;
+            animation: circle-bounce 1s .7s linear infinite;
 }
 
 .gi-countdown-bx .gi-step-indicator::after{
     display: block;
     content: " ";
     position: relative;
-    border-radius: 50%;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
     width: 10px;
     height: 10px;
     background-color: white;
 }
 
+@-webkit-keyframes circle-bounce{
+    70%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
+    
+    80%{-webkit-transform:rotate(-11deg);transform:rotate(-11deg)}
+    
+    90%{-webkit-transform:rotate(-2deg);transform:rotate(-2deg)}
+    
+    0%,40%,100%{-webkit-transform:rotate(-7deg);transform:rotate(-7deg)}
+}
+
+@-moz-keyframes circle-bounce{
+    70%{-moz-transform:rotate(0deg);transform:rotate(0deg)}
+    
+    80%{-moz-transform:rotate(-11deg);transform:rotate(-11deg)}
+    
+    90%{-moz-transform:rotate(-2deg);transform:rotate(-2deg)}
+    
+    0%,40%,100%{-moz-transform:rotate(-7deg);transform:rotate(-7deg)}
+}
+
+@-o-keyframes circle-bounce{
+    70%{-o-transform:rotate(0deg);transform:rotate(0deg)}
+    
+    80%{-o-transform:rotate(-11deg);transform:rotate(-11deg)}
+    
+    90%{-o-transform:rotate(-2deg);transform:rotate(-2deg)}
+    
+    0%,40%,100%{-o-transform:rotate(-7deg);transform:rotate(-7deg)}
+}
+
 @keyframes circle-bounce{
-    70%{transform:rotate(0deg)}
+    70%{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-o-transform:rotate(0deg);transform:rotate(0deg)}
     
-    80%{transform:rotate(-11deg)}
+    80%{-webkit-transform:rotate(-11deg);-moz-transform:rotate(-11deg);-o-transform:rotate(-11deg);transform:rotate(-11deg)}
     
-    90%{transform:rotate(-2deg)}
+    90%{-webkit-transform:rotate(-2deg);-moz-transform:rotate(-2deg);-o-transform:rotate(-2deg);transform:rotate(-2deg)}
     
-    0%,40%,100%{transform:rotate(-7deg)}
+    0%,40%,100%{-webkit-transform:rotate(-7deg);-moz-transform:rotate(-7deg);-o-transform:rotate(-7deg);transform:rotate(-7deg)}
 }
 
 .gi-countdown-bx .gi-step-bx{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     right: -45px;
     bottom: -30px;
     width: 100%;
     height: 100%;
-    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+       -moz-transform: rotate(-30deg);
+        -ms-transform: rotate(-30deg);
+         -o-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+    -webkit-transition: -webkit-transform 0.7s ease-in-out;
+    transition: -webkit-transform 0.7s ease-in-out;
+    -o-transition: -o-transform 0.7s ease-in-out;
+    -moz-transition: transform 0.7s ease-in-out, -moz-transform 0.7s ease-in-out;
     transition: transform 0.7s ease-in-out;
+    transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out, -moz-transform 0.7s ease-in-out, -o-transform 0.7s ease-in-out;
 }
 
 
@@ -288,7 +497,9 @@
     display: block;
     content: " ";
     position: relative;
-    border-radius: 3px;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
     width: 8px;
     height: 5px;
     background-color: white;
@@ -299,51 +510,99 @@
 }
 
 .gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(1){
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
 }
 
 .gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(2){
-    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+            transform: rotate(30deg);
 }
 
 .gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(3){
-    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+       -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+         -o-transform: rotate(60deg);
+            transform: rotate(60deg);
 }
 
 .gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(4){
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+         -o-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 
 .gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(5){
-    transform: rotate(120deg);
+    -webkit-transform: rotate(120deg);
+       -moz-transform: rotate(120deg);
+        -ms-transform: rotate(120deg);
+         -o-transform: rotate(120deg);
+            transform: rotate(120deg);
 }
 
 .gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(6){
-    transform: rotate(150deg);
+    -webkit-transform: rotate(150deg);
+       -moz-transform: rotate(150deg);
+        -ms-transform: rotate(150deg);
+         -o-transform: rotate(150deg);
+            transform: rotate(150deg);
 }
 
 .gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(7){
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
 
 .gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(8){
-    transform: rotate(210deg);
+    -webkit-transform: rotate(210deg);
+       -moz-transform: rotate(210deg);
+        -ms-transform: rotate(210deg);
+         -o-transform: rotate(210deg);
+            transform: rotate(210deg);
 }
 
 .gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(9){
-    transform: rotate(240deg);
+    -webkit-transform: rotate(240deg);
+       -moz-transform: rotate(240deg);
+        -ms-transform: rotate(240deg);
+         -o-transform: rotate(240deg);
+            transform: rotate(240deg);
 }
 
 .gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(10){
-    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+       -moz-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+         -o-transform: rotate(270deg);
+            transform: rotate(270deg);
 }
 
 .gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(11){
-    transform: rotate(300deg);
+    -webkit-transform: rotate(300deg);
+       -moz-transform: rotate(300deg);
+        -ms-transform: rotate(300deg);
+         -o-transform: rotate(300deg);
+            transform: rotate(300deg);
 }
 
 .gi-countdown-bx .gi-step-bx .gi-step-item:nth-child(12){
-    transform: rotate(330deg);
+    -webkit-transform: rotate(330deg);
+       -moz-transform: rotate(330deg);
+        -ms-transform: rotate(330deg);
+         -o-transform: rotate(330deg);
+            transform: rotate(330deg);
 }
 
 
@@ -357,6 +616,9 @@
     color: #f2f1f3;
     opacity: 0;
     visibility: hidden;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
 }
 
@@ -370,20 +632,48 @@
 .gi-waiting{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.6);
+    width: -webkit-calc(100% + 40px);
+    width: -moz-calc(100% + 40px);
     width: calc(100% + 40px);
+    height: -webkit-calc(100% + 40px);
+    height: -moz-calc(100% + 40px);
     height: calc(100% + 40px);
     left: -20px;
     bottom: -20px;
     z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 15px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-border-radius: 15px;
+       -moz-border-radius: 15px;
+            border-radius: 15px;
     opacity: 0;
     visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
 }
 
 .gi-waiting.active{
@@ -396,9 +686,21 @@
     position: relative;
     width: 150px;
     height: 150px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .gi-waiting .gi-waiting-img .gi-wi-after{
@@ -409,15 +711,45 @@
     height: 100%;
     background-image: url("../img/aitplane/airplane-shine.png");
     background-position: center;
-    background-size: cover;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.5;
-    animation: gi-wi-after-rotate 15s infinite;
+    -webkit-animation: gi-wi-after-rotate 15s infinite;
+       -moz-animation: gi-wi-after-rotate 15s infinite;
+         -o-animation: gi-wi-after-rotate 15s infinite;
+            animation: gi-wi-after-rotate 15s infinite;
+}
+
+@-webkit-keyframes gi-wi-after-rotate{
+    to{
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes gi-wi-after-rotate{
+    to{
+        -moz-transform: rotate(360deg);
+             transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes gi-wi-after-rotate{
+    to{
+        -o-transform: rotate(360deg);
+           transform: rotate(360deg);
+    }
 }
 
 @keyframes gi-wi-after-rotate{
     to{
-        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+           -moz-transform: rotate(360deg);
+             -o-transform: rotate(360deg);
+                transform: rotate(360deg);
     }
 }
 
@@ -427,10 +759,16 @@
     width: 76px;
     height: 50px;
     background-position: left center;
-    background-size: cover;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../img/aitplane/airplane.png");
-    animation: steps-sprite steps(47, start) 3s infinite;
+    -webkit-animation: steps-sprite steps(47, start) 3s infinite;
+       -moz-animation: steps-sprite steps(47, start) 3s infinite;
+         -o-animation: steps-sprite steps(47, start) 3s infinite;
+            animation: steps-sprite steps(47, start) 3s infinite;
 }
 
 .gi-waiting .gi-wi-text{
@@ -443,35 +781,59 @@
 
 /* --- Game start --- */
 .game-start .gi-airplane-bx{
-    animation: airplane-move 5s linear paused forwards;
+    -webkit-animation: airplane-move 5s linear paused forwards;
+       -moz-animation: airplane-move 5s linear paused forwards;
+         -o-animation: airplane-move 5s linear paused forwards;
+            animation: airplane-move 5s linear paused forwards;
 }
 
 .game-start .gi-mountains-bx .gi-mountain{
-    animation: mountain-move 60s paused linear infinite;
+    -webkit-animation: mountain-move 60s paused linear infinite;
+       -moz-animation: mountain-move 60s paused linear infinite;
+         -o-animation: mountain-move 60s paused linear infinite;
+            animation: mountain-move 60s paused linear infinite;
 }
 
 .game-start .gi-mountains-bx .gi-mountain.gim-2{
-    animation-duration: 90s;
+    -webkit-animation-duration: 90s;
+       -moz-animation-duration: 90s;
+         -o-animation-duration: 90s;
+            animation-duration: 90s;
 }
 
 .game-start .gi-mountains-bx .gi-mountain.gim-3{
-    animation-duration: 150s;
+    -webkit-animation-duration: 150s;
+       -moz-animation-duration: 150s;
+         -o-animation-duration: 150s;
+            animation-duration: 150s;
 }
 
 .game-start .gi-mountains-bx .gi-mountain.gim-4{
-    animation-duration: 210s;
+    -webkit-animation-duration: 210s;
+       -moz-animation-duration: 210s;
+         -o-animation-duration: 210s;
+            animation-duration: 210s;
 }
 
 .game-start .gi-mountains-bx .gi-mountain.gim-5{
-    animation-duration: 250s;
+    -webkit-animation-duration: 250s;
+       -moz-animation-duration: 250s;
+         -o-animation-duration: 250s;
+            animation-duration: 250s;
 }
 
 .game-start .dots-x{
-    animation: dots-move-x 60s paused linear infinite;
+    -webkit-animation: dots-move-x 60s paused linear infinite;
+       -moz-animation: dots-move-x 60s paused linear infinite;
+         -o-animation: dots-move-x 60s paused linear infinite;
+            animation: dots-move-x 60s paused linear infinite;
 }
 
 .game-start .dots-y{
-    animation: dots-move-y 60s paused linear infinite;
+    -webkit-animation: dots-move-y 60s paused linear infinite;
+       -moz-animation: dots-move-y 60s paused linear infinite;
+         -o-animation: dots-move-y 60s paused linear infinite;
+            animation: dots-move-y 60s paused linear infinite;
 }
 
 
@@ -485,7 +847,10 @@
 .game-start .gi-mountains-bx .gi-mountain,
 .game-start .dots-x,
 .game-start .dots-y{
-    animation-play-state: running;
+    -webkit-animation-play-state: running;
+       -moz-animation-play-state: running;
+         -o-animation-play-state: running;
+            animation-play-state: running;
 }
 
 
@@ -494,7 +859,10 @@
 .game-end .dots-x,
 .game-end .dots-y,
 .game-end .gi-mountains-bx .gi-mountain{
-    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+       -moz-animation-play-state: paused;
+         -o-animation-play-state: paused;
+            animation-play-state: paused;
 }
 
 .game-end .gi-airplane-bx > img,
@@ -512,28 +880,69 @@
         padding: 0px;
     }
     .gamesreen-bx{
-        border-radius: 0;
+        -webkit-border-radius: 0;
+           -moz-border-radius: 0;
+                border-radius: 0;
         padding-right: 0;
         padding-top: 0;
     }
 
-    @keyframes airplane-move {
+    @-webkit-keyframes airplane-move {
+        to{
+            width: -webkit-calc(100% - 50px);
+            width: calc(100% - 50px);
+            height: -webkit-calc(100% - 50px);
+            height: calc(100% - 50px);
+        }
+    }
+
+    @-moz-keyframes airplane-move {
+        to{
+            width: -moz-calc(100% - 50px);
+            width: calc(100% - 50px);
+            height: -moz-calc(100% - 50px);
+            height: calc(100% - 50px);
+        }
+    }
+
+    @-o-keyframes airplane-move {
         to{
             width: calc(100% - 50px);
             height: calc(100% - 50px);
         }
     }
 
+    @keyframes airplane-move {
+        to{
+            width: -webkit-calc(100% - 50px);
+            width: -moz-calc(100% - 50px);
+            width: calc(100% - 50px);
+            height: -webkit-calc(100% - 50px);
+            height: -moz-calc(100% - 50px);
+            height: calc(100% - 50px);
+        }
+    }
+
     .gi-waiting{
+        width: -webkit-calc(100% + 20px);
+        width: -moz-calc(100% + 20px);
         width: calc(100% + 20px);
+        height: -webkit-calc(100% + 20px);
+        height: -moz-calc(100% + 20px);
         height: calc(100% + 20px);;
-        border-radius: 0px;
+        -webkit-border-radius: 0px;;
+           -moz-border-radius: 0px;;
+                border-radius: 0px;
     }
 }
 
 @media (max-width:576px) {
     .gi-img-item.gi-airplane{
-        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+           -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+             -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
     }
 }
 
@@ -551,9 +960,16 @@
     color: var(--color6);
     border: 1px solid var(--color6);
     text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     font-size: 14px;
-    border-radius: 50px;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -580,8 +996,14 @@
 }
 
 .beting-btns-group{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     margin-top: -5px;
     margin-bottom: -3px;
 }
@@ -589,18 +1011,34 @@
 .beting-btns-group .beting-btn{
     color: white;
     padding: 3px 3px;
-    flex: 0 1 16.33%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 16.33%;
+       -moz-box-flex: 0;
+        -ms-flex: 0 1 16.33%;
+            flex: 0 1 16.33%;
     width: 16.33%;
     text-align: center;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
     font-size: 14px;
-    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+       -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+         -o-transform: scale(0.9);
+            transform: scale(0.9);
     margin: 0 0 8px 0;
     border: 1px solid var(--color2);
     background-color: var(--color2-300);
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
     cursor: pointer;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 @media (min-width:992px) {
@@ -617,23 +1055,56 @@
 }
 
 .beting-place_take-btns{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 5px;
 }
 
 .beting-place_take-btns button{
     width: 49%;
-    flex: 0 0 49%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 49%;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 49%;
+            flex: 0 0 49%;
     height: 40px;
     text-align: center;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     color: white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     cursor: pointer;
     font-size: 14px;
     text-transform: capitalize;
@@ -690,7 +1161,11 @@
     }
 
     .beting-btns-group .beting-btn{
-        flex: 0 1 25%;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 25%;
+           -moz-box-flex: 0;
+            -ms-flex: 0 1 25%;
+                flex: 0 1 25%;
         width: 25%;
     }
 }
@@ -699,13 +1174,26 @@
 /* --- Gamesreen Table --- */
 
 .gs-table-radius{
-    border-radius: 10px;
+    -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+            border-radius: 10px;
     overflow: hidden;
 }
 
 .gs-table-heading-bx{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-image: -webkit-linear-gradient(135deg, var(--color7), var(--color6));
+    background-image: -moz-linear-gradient(135deg, var(--color7), var(--color6));
+    background-image: -o-linear-gradient(135deg, var(--color7), var(--color6));
     background-image: linear-gradient(-45deg, var(--color7), var(--color6));
 }
 
@@ -725,7 +1213,11 @@
     font-size: 11px;
     font-weight: 500;
     text-align: center;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+       -moz-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 
 .gs-player-table-heading-bx .gs-table-heading-item svg{
@@ -737,16 +1229,23 @@
 }
 
 .gs-table-responsive{
+    height: -webkit-calc(213.78px - 33.8px);
+    height: -moz-calc(213.78px - 33.8px);
     height: calc(213.78px - 33.8px);
     overflow: auto;
-    border-radius: 0;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
 }
 
 .gs-table-responsive.gs-players-table-height{
+    height: -webkit-calc(461px);
+    height: -moz-calc(461px);
     height: calc(461px);
 }
 
 .gs-table-responsive .custom-table thead{
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     border-bottom: 1px solid rgb(63, 59, 69);

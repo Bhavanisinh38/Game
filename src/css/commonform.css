@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 120 version
+*/
+
 /* --- Commun Form Css --- */
 
 /* Chrome, Safari, Edge, Opera */
@@ -36,7 +43,12 @@ input[type=number] {
     width: 100%;
     outline: none;
     padding: 8px 15px;
-    border-radius: 8px;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -105,9 +117,21 @@ input[type=number] {
     top: 26px;
     width: 45px;
     height: 45px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     pointer-events: none;
 }
 
@@ -116,7 +140,11 @@ input[type=number] {
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
     width: 1px;
     height: 50%;
     background-color: rgb(63, 59, 69);
@@ -128,7 +156,11 @@ input[type=number] {
     border-width: 0px 2px 2px 0px;
     display: inline-block;
     padding: 4px;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
     position: absolute;
     right: 14px;
     top: 40px;
@@ -139,7 +171,20 @@ input[type=number] {
 .signinup-group textarea:hover,
 .signinup-group input:hover {
     border-color: white;
-    box-shadow: 0 0 1px 1px white;
+    -webkit-box-shadow: 0 0 1px 1px white;
+       -moz-box-shadow: 0 0 1px 1px white;
+            box-shadow: 0 0 1px 1px white;
+}
+
+.signinup-group textarea:not(:-moz-placeholder-shown), .signinup-group select:not(:-moz-placeholder-shown), .signinup-group input:not(:-moz-placeholder-shown) {
+    border-color: var(--color2);
+    -moz-box-shadow: 0 0 1px 1px var(--color2);
+         box-shadow: 0 0 1px 1px var(--color2);
+}
+
+.signinup-group textarea:not(:-ms-input-placeholder), .signinup-group select:not(:-ms-input-placeholder), .signinup-group input:not(:-ms-input-placeholder) {
+    border-color: var(--color2);
+    box-shadow: 0 0 1px 1px var(--color2);
 }
 
 .signinup-group textarea:focus,
@@ -149,7 +194,17 @@ input[type=number] {
 .signinup-group input:focus,
 .signinup-group input:not(:placeholder-shown) {
     border-color: var(--color2);
-    box-shadow: 0 0 1px 1px var(--color2);
+    -webkit-box-shadow: 0 0 1px 1px var(--color2);
+       -moz-box-shadow: 0 0 1px 1px var(--color2);
+            box-shadow: 0 0 1px 1px var(--color2);
+}
+
+.signinup-group textarea:not(:-moz-placeholder-shown)~.group__label, .signinup-group select:not(:-moz-placeholder-shown)~.group__label, .signinup-group input:not(:-moz-placeholder-shown)~.group__label {
+   color: white;
+}
+
+.signinup-group textarea:not(:-ms-input-placeholder)~.group__label, .signinup-group select:not(:-ms-input-placeholder)~.group__label, .signinup-group input:not(:-ms-input-placeholder)~.group__label {
+   color: white;
 }
 
 .signinup-group textarea:not(:placeholder-shown)~.group__label,
@@ -163,8 +218,16 @@ input[type=number] {
 
 /* --- signinup-group-radio --- */
 .signinup-group-radio {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .signinup-group-radio label {
@@ -176,13 +239,28 @@ input[type=number] {
     margin: 4px 0;
     margin-right: 8px;
     padding: 5px 16px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    border-radius: 50px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
     text-transform: capitalize;
     background-color: rgba(32, 30, 35, 0.5);
     border: 1px solid rgb(63, 59, 69);
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 }
 
@@ -199,16 +277,32 @@ input[type=number] {
 
 /* --- otp-group --- */
 .signinup-group.otp-group{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 5px 0 20px;
 }
 
 .signinup-group.otp-group input{
     width: 45px;
     height: 45px;
-    flex: 0 0 45px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 45px;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 45px;
+            flex: 0 0 45px;
     margin: 0 5px;
     text-align: center;
     padding: 0;
@@ -217,7 +311,9 @@ input[type=number] {
 /* --- Signinup group nots --- */
 .signinup-group-nots{
     background: var(--color1-500);
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
     padding: 5px 10px;
     margin-bottom: 20px;
 }
@@ -249,10 +345,15 @@ input[type=number] {
     display: inline-block;
     color: #bfbac4;
     font-weight: 500;
-    border-radius: 50px;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: 14px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     text-decoration: underline;
 }
@@ -275,13 +376,30 @@ input[type=number] {
     top: 26px;
     width: 45px;
     height: 45px;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     padding: 8px;
     cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
 }
 
 .clear-input-icon:hover{
@@ -300,7 +418,9 @@ Error Input color css
 .signinup-group.error-group select,
 .signinup-group.error-group input{
     border-color: var(--color4);
-    box-shadow: 0 0 1px 1px var(--color4);
+    -webkit-box-shadow: 0 0 1px 1px var(--color4);
+       -moz-box-shadow: 0 0 1px 1px var(--color4);
+            box-shadow: 0 0 1px 1px var(--color4);
 }
 
 .signinup-group.error-group .group__label{
@@ -330,6 +450,8 @@ Error Input color css
 /* --- Remember Input Checkbox --- */
 .signinup-group-checkmark{
     margin: 15px 0 20px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -339,21 +461,40 @@ Error Input color css
     font-weight: 400;
     margin: 0;
     margin-left: 8px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     cursor: pointer;
 }
 
 .signinup-group-checkmark label .checkmark-icon{
     width: 25px;
     height: 25px;
-    flex: 0 0 25px;
-    border-radius: 5px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25px;
+       -moz-box-flex: 0;
+        -ms-flex: 0 0 25px;
+            flex: 0 0 25px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
     margin-right: 8px;
     background-color: transparent;
     background-position: center;
-    box-shadow: 0 0 0px 4px rgb(63 59 69 / 0%) inset;
+    -webkit-box-shadow: 0 0 0px 4px rgb(63 59 69 / 0%) inset;
+       -moz-box-shadow: 0 0 0px 4px rgb(63 59 69 / 0%) inset;
+            box-shadow: 0 0 0px 4px rgb(63 59 69 / 0%) inset;
     border: 2px solid rgb(63, 59, 69);
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -372,23 +513,51 @@ Error Input color css
     background-color: var(--color2);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 90%;
-    box-shadow: none;
+    -webkit-background-size: 90% 90%;
+       -moz-background-size: 90%;
+         -o-background-size: 90%;
+            background-size: 90%;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
 }
 
 
 /* --- Common File Upload Css --- */
 .fileupload{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 15px 10px;
     width: 100%;
     min-height: 100px;
-    border-radius: 16px;
+    -webkit-border-radius: 16px;
+       -moz-border-radius: 16px;
+            border-radius: 16px;
     background-color: rgba(32, 30, 35, 0.5);
     border: 1px solid rgb(63, 59, 69);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -397,6 +566,9 @@ Error Input color css
     width: 50px;
     height: 50px;
     opacity: 0.5;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
@@ -406,6 +578,9 @@ Error Input color css
     font-size: 16px;
     margin-top: 15px;
     text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
@@ -417,7 +592,9 @@ Error Input color css
 .fileupload:hover{
     border-style: solid;
     border-color: var(--color2);
-    box-shadow: 0 0 1px 1px var(--color2);
+    -webkit-box-shadow: 0 0 1px 1px var(--color2);
+       -moz-box-shadow: 0 0 1px 1px var(--color2);
+            box-shadow: 0 0 1px 1px var(--color2);
 }
 
 .fileupload:hover .feud-img{
@@ -441,26 +618,37 @@ Error Input color css
     padding: 12px;
     font-size: 16px;
     margin-top: 15px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px #00000070;
+    -webkit-border-radius: 12px;
+       -moz-border-radius: 12px;
+            border-radius: 12px;
+    -webkit-box-shadow: 0 0 10px #00000070;
+       -moz-box-shadow: 0 0 10px #00000070;
+            box-shadow: 0 0 10px #00000070;
     background-color: rgba(32, 30, 35, 0.5);
     border: 1px solid rgb(63, 59, 69);
     list-style-position: inside;
     padding-right: 100px;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
 }
 
 .fileupload-list .fileupload-item img{
     max-width: 150px;
     width: 100%;
     height: 90px;
-    border-radius: 5px;
-    object-fit: contain;
-    object-position: center;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
     background: #121114;
-    box-shadow: 0 0 10px 0px #00000070 inset;
+    -webkit-box-shadow: 0 0 10px 0px #00000070 inset;
+       -moz-box-shadow: 0 0 10px 0px #00000070 inset;
+            box-shadow: 0 0 10px 0px #00000070 inset;
 }
 
 .fileupload-list .fileupload-item.filstn{
@@ -501,12 +689,25 @@ Error Input color css
     width: 100%;
     height: 100%;
     z-index: 111;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
 }
 
 .fileupload-video-popup{
@@ -516,12 +717,25 @@ Error Input color css
     width: 100%;
     height: 100%;
     z-index: 111;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
 }
 
 .video-wraper-item{
@@ -534,15 +748,27 @@ Error Input color css
 .video-wraper-item video{
     position: absolute;
     max-width: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: contain;
-    object-position: center;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
     max-height: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
 }
 
 
@@ -565,11 +791,25 @@ Error Input color css
 .common-submit-btn,
 .lsb-loader-btn,
 .login-submit-btn{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 8px 15px;
-    border-radius: 50px;
+    -webkit-border-radius: 50px;
+       -moz-border-radius: 50px;
+            border-radius: 50px;
     width: 100%;
     font-weight: 400;
     color: #f2f1f3;
@@ -580,7 +820,12 @@ Error Input color css
     outline: none;
     cursor: pointer;
     background-color: var(--color2);
+    -webkit-transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-transform 0.3s ease;
+    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-transform 0.3s ease;
+    -o-transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out, -o-transform 0.3s ease;
+    -moz-transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease, -moz-transform 0.3s ease;
     transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease;
+    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease, -webkit-transform 0.3s ease, -moz-transform 0.3s ease, -o-transform 0.3s ease;
     max-width: 450px;
     width: 100%;
     letter-spacing: 0.5px;
@@ -598,7 +843,11 @@ Error Input color css
 
 .common-submit-btn:active,
 .login-submit-btn:active{
-    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+       -moz-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+         -o-transform: scale(0.95);
+            transform: scale(0.95);
 }
 
 
@@ -610,17 +859,65 @@ Error Input color css
     margin-right: 7px;
     position: relative;
     margin-right: 8px;
-    animation: rotation-btn 1s infinite linear;
+    -webkit-animation: rotation-btn 1s infinite linear;
+       -moz-animation: rotation-btn 1s infinite linear;
+         -o-animation: rotation-btn 1s infinite linear;
+            animation: rotation-btn 1s infinite linear;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+}
+
+@-webkit-keyframes rotation-btn {
+    from {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotation-btn {
+    from {
+        -moz-transform: rotate(0deg);
+             transform: rotate(0deg);
+    }
+
+    to {
+        -moz-transform: rotate(360deg);
+             transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotation-btn {
+    from {
+        -o-transform: rotate(0deg);
+           transform: rotate(0deg);
+    }
+
+    to {
+        -o-transform: rotate(360deg);
+           transform: rotate(360deg);
+    }
 }
 
 @keyframes rotation-btn {
     from {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+           -moz-transform: rotate(0deg);
+             -o-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
 
     to {
-        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+           -moz-transform: rotate(360deg);
+             -o-transform: rotate(360deg);
+                transform: rotate(360deg);
     }
 }
 
@@ -639,7 +936,34 @@ Error Input color css
 .form-white .signinup-group textarea:hover,
 .form-white .signinup-group input:hover {
     border-color: var(--color2);
-    box-shadow: 0 0 1px 1px var(--color2);
+    -webkit-box-shadow: 0 0 1px 1px var(--color2);
+       -moz-box-shadow: 0 0 1px 1px var(--color2);
+            box-shadow: 0 0 1px 1px var(--color2);
+}
+
+.form-white .signinup-group select::-webkit-input-placeholder, .form-white .signinup-group textarea::-webkit-input-placeholder, .form-white .signinup-group input::-webkit-input-placeholder{
+    font-weight: 400;
+    color: gray;
+}
+
+.form-white .signinup-group select:-moz-placeholder, .form-white .signinup-group textarea:-moz-placeholder, .form-white .signinup-group input:-moz-placeholder{
+    font-weight: 400;
+    color: gray;
+}
+
+.form-white .signinup-group select::-moz-placeholder, .form-white .signinup-group textarea::-moz-placeholder, .form-white .signinup-group input::-moz-placeholder{
+    font-weight: 400;
+    color: gray;
+}
+
+.form-white .signinup-group select:-ms-input-placeholder, .form-white .signinup-group textarea:-ms-input-placeholder, .form-white .signinup-group input:-ms-input-placeholder{
+    font-weight: 400;
+    color: gray;
+}
+
+.form-white .signinup-group select::-ms-input-placeholder, .form-white .signinup-group textarea::-ms-input-placeholder, .form-white .signinup-group input::-ms-input-placeholder{
+    font-weight: 400;
+    color: gray;
 }
 
 .form-white .signinup-group select::placeholder,
