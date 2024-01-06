@@ -288,6 +288,12 @@ Flash Message Two Popup Start
             box-shadow: 0 0 25px -10px var(--color3);
 }
 
+@media screen and (max-width:576px) {
+    .flash-message-two{
+        top: 120px;
+    }
+}
+
 @media screen and (max-width:500px) {
     .flash-message-two{
         max-width: 100%;
