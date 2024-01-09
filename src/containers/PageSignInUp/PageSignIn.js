@@ -59,7 +59,7 @@ export default function PageSignIn() {
                             {[0].map((index) => (
                             <div className="col-12" key={index}>
                                 <div className="signinup-group sgri">
-                                    <div className="group__label">Password</div>
+                                    <div className="group__label">Password <Link className="forget-link" to="/forgotpassword">Forgot password?</Link></div>
                                     <input type={showPasswords[index] ? 'text' : 'password'} placeholder="Enter password"/>
                                     <span className={`group_right_icon ${showPasswords[index] ? "active" : "" }`} onClick={() => togglePasswordVisibility(index)} >
                                         {showPasswords[index] ? viewpassSvg() : hidepassSvg()}

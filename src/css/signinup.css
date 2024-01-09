@@ -86,6 +86,7 @@ Screen heading
     text-align: center;
 }
 
+.forget-link,
 .signuptooglebtn,
 .otp-sent-msg {
     color: #bfbac4;
@@ -97,6 +98,11 @@ Screen heading
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+}
+
+.forget-link{
+    float: right;
+    margin: 0;
 }
 
 .signuptooglebtn{
@@ -113,6 +119,7 @@ Screen heading
     color: #f2f1f3;
 }
 
+.forget-link:hover,
 .otp-sent-msg:hover span{
     color: white;
     text-decoration: underline;
