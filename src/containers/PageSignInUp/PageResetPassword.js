@@ -5,8 +5,7 @@ import {Link} from "react-router-dom";
 import * as Img from '../../components/Img';
 
 // Css File
-import '../../css/signinup.css'
-
+import '../../css/signinup.css';
 
 const hidepassSvg = () => {
     return(
@@ -25,7 +24,7 @@ const viewpassSvg = () => {
     )
 }
 
-export default function PageSignIn() {
+export default function PageResetPassword() {
 
     const [showPasswords, setShowPasswords] = useState([false, false, false]);
 
@@ -40,65 +39,52 @@ export default function PageSignIn() {
             <div className="login-page-back-effect"></div>
             <div className="sign-in-up-bx">
     
-                <div className='signinup-screen active' id="login-screen">
+                <div className='signinup-screen active' id="resetpassword-screen">
 
-                    <img className='signinup-logo' src={Img.logo_white} alt='Crash game logo' />
-                    <div className="screen-hed">Log in</div>
+                    <div className='signinup-header'>
+                        <Link to="/signin" className="back-btn" title="Back to Login">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true" color="#F2F1F3" width="20px"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path></svg>
+                        </Link>
+                        <img className='signinup-logo' src={Img.logo_white} alt='Crash game logo' />
+                    </div>
+
+                    <div className="screen-hed text-center">Reset password?</div>
 
                     <form>
 
                         <div className="row">
-
-                            <div className="col-12">
-                                <div className="signinup-group">
-                                    <div className="group__label">Your email id</div>
-                                    <input type="email" placeholder="you@example.com"/>
-                                </div>
-                            </div>
-
-                            {[0].map((index) => (
+    
+                        {[0, 1].map((index) => (
                             <div className="col-12" key={index}>
                                 <div className="signinup-group sgri">
-                                    <div className="group__label">Password</div>
-                                    <input type={showPasswords[index] ? 'text' : 'password'} placeholder="Enter password"/>
+                                    <div className="group__label">{index === 0 ? "New" : "Confirm"} password</div>
+                                    <input type={showPasswords[index] ? 'text' : 'password'} placeholder={`Enter ${index === 0 ? "New" : "Confirm"} password`}/>
                                     <span className={`group_right_icon ${showPasswords[index] ? "active" : "" }`} onClick={() => togglePasswordVisibility(index)} >
                                         {showPasswords[index] ? viewpassSvg() : hidepassSvg()}
                                     </span>
                                 </div>
                             </div>
-                            ))}
-
-                            <div className="col-12">
-                                <div className="signinup-group-checkmark">
-                                    <input className="d-none" type="checkbox" id="checkmark"/>
-                                    <label className="checkmark-lable" htmlFor="checkmark"><span className="checkmark-icon"></span>Remember Me</label>
-                                </div>
-                            </div>
-
+                        ))}
+                        
                         </div>
 
                         <div className="site-info text-center">
                             By continuing you agree to Crash Game <Link to="/terms">Terms & Conditions</Link> & <Link to="/privacy">Privacy Policy</Link>.
                         </div>
 
-                    
-
-                        <Link to='/signotp' className="login-submit-btn">Continue</Link>
-                        <Link to='/signup' className="login-submit-btn">Continue</Link>
-
-                        {/* <button type="button" className="login-submit-btn" desabled>Continue</button> */}
+                        <button type="button"  className="login-submit-btn" disabled>Reset Account</button>
 
                         <div className="lsb-loader-btn">
                             <img src={Img.loading} alt="Please wait" />Please wait ....
                         </div>
 
-                        <div className="signuptooglebtn text-center mt-2">New user?
-                            <Link to='/signup' className='login-this'>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                </svg>
-                                Create an account
-                            </Link>
+                        <div className="signuptooglebtn text-center mt-2">
+                        <Link to='/signin' className='login-this'>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                            </svg>
+                            Back to Login
+                        </Link>
                         </div>
 
                     </form>

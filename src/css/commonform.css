@@ -75,9 +75,9 @@ input[type=number] {
     padding-right: 40px;
 }
 
-.signinup-group input[type="password"] {
-    padding: 10px 40px 10px 10px;
-}
+/* .signinup-group input[type="password"] {
+    padding: 8px 40px 8px 15px;
+} */
 
 .signinup-group textarea{
     min-height: 80px;
@@ -148,6 +148,57 @@ input[type=number] {
     width: 1px;
     height: 50%;
     background-color: rgb(63, 59, 69);
+}
+
+.signinup-group.sgri .group_right_icon{
+    position: absolute;
+    right: 0px;
+    top: 26px;
+    width: 45px;
+    height: 45px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+}
+
+.signinup-group.sgri .group_right_icon::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 1px;
+    height: 50%;
+    background-color: rgb(63, 59, 69);
+}
+
+.group_right_icon .gri_password{
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+}
+
+.group_right_icon.active .gri_password,
+.group_right_icon:hover .gri_password{
+    opacity: 1;
 }
 
 .signinup-group .down-icon{
@@ -449,7 +500,7 @@ Error Input color css
 
 /* --- Remember Input Checkbox --- */
 .signinup-group-checkmark{
-    margin: 15px 0 20px;
+    margin: 5px 0 5px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -475,13 +526,13 @@ Error Input color css
 }
 
 .signinup-group-checkmark label .checkmark-icon{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 25px;
+    -webkit-flex: 0 0 20px;
        -moz-box-flex: 0;
-        -ms-flex: 0 0 25px;
-            flex: 0 0 25px;
+        -ms-flex: 0 0 20px;
+            flex: 0 0 20px;
     -webkit-border-radius: 5px;
        -moz-border-radius: 5px;
             border-radius: 5px;
@@ -513,10 +564,10 @@ Error Input color css
     background-color: var(--color2);
     background-repeat: no-repeat;
     background-position: center;
-    -webkit-background-size: 90% 90%;
-       -moz-background-size: 90%;
-         -o-background-size: 90%;
-            background-size: 90%;
+    -webkit-background-size: 87%  90%;
+       -moz-background-size: 87%  90%;
+         -o-background-size: 87%  90%;
+            background-size: 87%  90%;
     -webkit-box-shadow: none;
        -moz-box-shadow: none;
             box-shadow: none;

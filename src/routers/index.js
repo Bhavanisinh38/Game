@@ -16,6 +16,8 @@ import PageHome from "../containers/PageHome/PageHome";
 import PageSignIn from "../containers/PageSignInUp/PageSignIn";
 import PageSignUp from "../containers/PageSignInUp/PageSignUp";
 import PageSignOtp from "../containers/PageSignInUp/PageSignOtp";
+import PageForgotPassword from "../containers/PageSignInUp/PageForgotPassword";
+import PageResetPassword from "../containers/PageSignInUp/PageResetPassword";
 
 //Accout Pages
 import PageAccount from "../containers/PageAccount/PageAccount";
@@ -49,6 +51,8 @@ export const pages = [
   { path: "/signin", component: PageSignIn },
   { path: "/signup", component: PageSignUp },
   { path: "/signotp", component: PageSignOtp },
+  { path: "/forgotpassword", component: PageForgotPassword },
+  { path: "/resetpassword", component: PageResetPassword },
 
   { path: "/account", component: PageAccount },
   { path: "/wallet", component: PageWallet },
@@ -70,8 +74,8 @@ const MyRoutes = () => {
 
   const location = useLocation();
 
-  const pathsToHideheader = ['/signin', '/signup', '/signotp'];
-  const pathsToHidefooter = ['/signin', '/signup', '/signotp', '/account', '/wallet', '/bankaccount', '/notifications' ];
+  const pathsToHideheader = ['/signin', '/signup', '/signotp', '/forgotpassword', '/resetpassword'];
+  const pathsToHidefooter = ['/signin', '/signup', '/signotp', '/account', '/wallet', '/bankaccount', '/notifications', '/forgotpassword', '/resetpassword' ];
   const hideheader = pathsToHideheader.includes(location.pathname);
   const hidefooter = pathsToHidefooter.includes(location.pathname);
 
